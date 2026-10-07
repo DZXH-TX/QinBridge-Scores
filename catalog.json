@@ -1,4 +1,5 @@
 {
+  "onLoad": "security-test-data-only",
   "format": "qinbridge.catalog",
   "version": 1,
   "scores": [

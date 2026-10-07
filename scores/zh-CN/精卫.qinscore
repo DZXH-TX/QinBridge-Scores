@@ -1,0 +1,24 @@
+{
+  "format": "qinbridge.score",
+  "version": 1,
+  "title": "精卫",
+  "sourceUrl": "",
+  "scoreText": "(ZV) (VD) /(VG) V /(VD) (VH) /(VG) V /\r\n(XB) (BD) /(BG) B /(BH) B /(BD) B /\r\n(CN) N /(ND) (NG) /N N /(NG) N /\r\n(CN) (ND) /(NG) (NH) /(NG) N /(XBD) B /\r\n\r\n(ZVD) (VS) /V (VD) /(VS) V /(VD) (VS) /\r\n(XBD) (BS) /B (BD) /(BS) B /(BD) (BS) /\r\n(XND) (NS) /N (ND) /(NS) N /(ND) (NS) /\r\n(CND) (NS) /N (ND) /(NS) (NQ) /(XBH) (BH) /\r\n\r\n(ZVH) (VH)Z/(NAW) (ZVE) /(VW) Z /(NAQ) (ZVH) /\r\n(XB) (BH)X/(MSW) (XBE) /(BW) X /(MSE) (XB) /\r\n(CNH) (NH)(CH)/(ADW) (CNE) /(NW) C /(ADQ) (CNH) /\r\n(CN) N /(AD) (CN) /N (CQ) /(BSH) (XBH) /\r\n\r\n(ZVH) (VH)(ZH)/(NAW) (ZVE) /(VW) Z /(NAQ) (ZVH) /\r\n(XB) (BH)X/(MSW) (XBE) /(BW) X /(MSE) (XBH) /\r\n(CNH) NC/(AD) (CN) /N (CG) /(ADG) (CNG) /\r\n(CNG) NH/N (CNS) (CQ) /(BSQ) (XBQ) /\r\n\r\n(ZVW) (VQ) /(NAH) (ZVG) /(VW) Z /(NA) (ZVW) /\r\n(XB) (BE) /(MST) (XBE) /(BW)E X/ (MS) (XB) /\r\n(CNE) (NT) /(ADY) (CNT) /(NE) C /(AD) (CNW) /\r\n(CN) (NE) /(ADT) (CNDE) /(NSE) (CS) /(BSW) (XBSE) /\r\n\r\n(ZVD) (VN) /(NA) (ZV) /V Z /(NA) (ZV) /\r\n(XB) B /(MS) (XBE) /(BW) (XW) /(MSW) (XBE) /\r\n(CN) (NE) /(AD) (CN) /N C /(AD) (CN) /\r\n(CN) (NE) /(ADW) (CNQ) /(NW) C /(BH) (XB) /\r\n\r\n(ZVHT) (VQE) /(NAWT) (ZVE) /(VWT) Z /(NAE) (ZVQ) /\r\n(XBH) (BQT) /(MSW) (XBE) /(BWT) X /(MSE) (XB) /\r\n(CNHT) (NE) /(ADT) (CN) /N C /(ADE) (CN) /\r\n(CN) N /(AD) (CN) /N (CQ) /(BH) (XBH) /\r\n\r\n(ZVH) (VH)Z/(NAW) (ZVE) /(VW) Z /(NAQ) (ZVH) /\r\n(XB) (BH)X/(MSW) (XBE) /(BW) X /(MSE) (XB) /\r\n(CN) (NH) /(AD) (CN) /N C /(AD) (CN) /\r\n(CN) N /(AD) (CN) /N (CQ) /(BH) (XBH) /\r\n\r\n(ZVH) (VH)Z/(NAW) (ZVE) /(VW) Z /(NAQ) (ZVH) /\r\n(XB) (BQ)X/(MSW) (XBE) /(BW) X /(MS) (XB) /\r\n(CNH) (NQ)C/(ADW) (CNE) /(NW) C /(ADQ) (CNH) /\r\n(CN) (NQ) /(ADW) (CNE) /(NW) C /(BE) (XB) /\r\n\r\n(ZVH) V /(NA) (ZV) /V (ZQ) /(NAH) (ZVG) /\r\n(XB) B /(MS) (XB) /B X /(MSG) (XB) /\r\n(CNH) N /(AD) (CN) /N C /(AD) (CN) /\r\n(CN) N /(AD) (CN) /N (CG) /(BD) (XBG) /\r\n\r\n(ZVG) (VD) /(ND) S /S /V Z /\r\n(XBD) (BG) /(MG) (BD) /(BD) /B X /\r\n(CND) (CG) /(AG) D /D /(AS) N /\r\n(CND) (CG) /(AG) (ND) /(ND) C /(XBS) (BA) /\r\n\r\n(ZVD) (VG) /(NS) D /S /(VA) (ZN) /\r\n(XBD) (BG) /(MS) (BD) /(BS) /B X /\r\n(CND) (CG) /(AS) N /(ND) C /A N /\r\n(CND) (CG) /(AS) N /(ND) C /(XB) (BA) /\r\n\r\n(ZVN) (VA) /(NS) (VD) /(VS) Z /N (VA) /\r\n(XBN) (BA) /(MS) (BD) /(BS) /(MD) (BA) /\r\n(CN) (CA) /(AS) (ND) /(NS) C /A (NA) /\r\n(CN) (CA) /(AS) (ND) /(NS) (CD) /(BA) (XS) /\r\n\r\n(ZVN) (VA) /(NS) (VD) /(VS) Z /N V /\r\n(XB) (BD) /(MS) (BN) /(BS) (XD) /(MS) (BA) /\r\n(CN) (CA) /(AS) (ND) /(NS) C /(AD) N /\r\n(CN) (CA) /(CN) N /N (CE) /(BSW) (XBQ) /\r\n\r\n(ZVH) (VQ)Z/(NAW) (ZVE) /(VW) Z /(NAE) (ZV) /\r\n(XBH) (BA)X/(MSH) (XB) /B (XE) /(MSW) (XBQ) /\r\n(CNH) (NQ)C/(ADW) (CNE) /(NW) C /(ADE) (CN) /\r\n(CNQ) (NH) /(ADH) (CN) /N (CE) /(BW) (XBQ) /\r\n\r\n(ZVJ) (VQ)Z/(NAJ) (ZVQ) /(VJ) Z /(NA) (ZV) /\r\n(XBJ) (BQ)X/(MSJ) (XBQ) /(BJ) X /(MSG) (XB) /\r\n(CNH) N /(AD) (CN) /N C /(AD) (CN) /\r\n(CN) N /(AD) (CN) /N (CT) /(BE) (XBT) /\r\n\r\n(ZVT) (VY) /(NAT) (ZVE) /(VT) (ZE) /(NAE) (ZVW) /\r\n(XBW) (BE) /(MST) (XBE) /(BE) X /(MSW) (XBE) /\r\n(CNW) (NE) /(ADT) (CNE) /(NE) C /(AD) (CN) /\r\n(CN) N /(AD) (CN) /N (CT) /(BE) (XBT) /\r\n\r\n(ZVY) (VT) /(NAT) (ZVE) /(VT) (ZE) /(NAE) (ZV) /\r\n(XBW) B /(MS) (XB) /(BW) (XE) /(MSE) (XBH) /\r\n(CNH) (NQ) /(ADW) (CNE) /(NW) C /(ADE) (CN) /\r\n(CNH) (NQ) /(ADH) (CN) /N C /(BG) (XB) /\r\n\r\n(ZVG) (VD) /(VG) (VD) /(VD) V /(VS) V /\r\n(XBG) (BD) /(BG) (BD) /(BD) B /(BS) B /\r\n(CNG) (ND) /(NG) (ND) /(ND) N /(NS) N /\r\n(CND) N /N N /N N /(XB) B /\r\n\r\n(ZVG) (VD) /(VG) (VD) /(VD) V /(VS) V /\r\n(XBG) (BD) /(BG) (BD) /(BD) B /(BS) B /\r\n(CND) N /(ND) N /(ND) N /(NS) N /\r\n(CND) N /N N /N N /N N /",
+  "settings": {
+    "slotMilliseconds": 125,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.72,
+    "rhythm": {
+      "bpm": 109,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 138
+  }
+}

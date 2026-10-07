@@ -1,0 +1,24 @@
+{
+  "format": "qinbridge.score",
+  "version": 1,
+  "title": "Court of the Silver Moon · Lullaby of the New Moon",
+  "sourceUrl": "",
+  "scoreText": "[SGWE] S /D F /Q  /   /\r\n\r\n(SDQE) S /D F /Q D /   /\r\n\r\n[SGJE] S /D F /Q  /   /\r\n\r\n[SJE] S /D F /J  /   /\r\n\r\n\r\n\r\n[SFH] /W  /W  / Q /\r\n\r\n[SDHW] /Q J /G  /   /\r\n\r\n[BSFH] /F  /G H /Q  /\r\n\r\n[XASH] QHG/H  /   /   /\r\n\r\n\r\n\r\n[VNSH] /W  /[NSGW] / Q /\r\n\r\n[CBAW] /Q J /[XBMG] /   /\r\n\r\n[BSFH] /F  /[BADG] F /D A /\r\n\r\n(XF)D(NS) /S D /(FR) /(ZT)  /\r\n\r\n\r\n\r\n[VNSY] Y/T R /[SGT] YT/(ZR) E /\r\n\r\n(XR) (NE) /(SW) D /(SHR) E /(ZGR) T /\r\n\r\n[VNSY] Y/T R /[BADT] /R E /\r\n\r\n[VAFY] /   /[BSGR] /T  /\r\n\r\n\r\n\r\n[VNSY] Y/T R /[SGT] /(ZR) E /\r\n\r\n(XR) (NE) /(SW) D /(SHW) E /(ZGR) E /\r\n\r\n(BR)E(XW) /S (FY) /(ZT) (BR) /(AE) (DQ) /\r\n\r\n(XHW) S /D F /W H /J N /\r\n\r\n\r\n\r\nX S /D F /(GW) /   /\r\n\r\n\r\n\r\n(XHW) S /D F /(QY)  /  TR/\r\n\r\n(XJE) S /(DQ) F /(GQ)  /H  /\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n[XNH] /W  /W  / Q /\r\n\r\n[XCNW] /Q J /G  /   /\r\n\r\n[BSFH] /F  /G H /Q  /\r\n\r\n[XASH] QHG/H  /   /   /\r\n\r\n\r\n\r\n[VNSH] /W  /[NSGW] / Q /\r\n\r\n[CBAW] EW/Q J /[XBMG] /   /\r\n\r\n[BSFH] /F  /[BADG] F /D A /\r\n\r\n(XF)D(NS) /S D /(FR) /(ZT)  /\r\n\r\n\r\n\r\n[VNSY] Y/T R /[SGT] YT/(ZR) E /\r\n\r\n(XR) (NE) /(SW) D /(SHR) E /(ZGR) T /\r\n\r\n[VNSY] Y/T R /[BADT] /R E /\r\n\r\n[VAFY] /    /[BSGR] /T  /\r\n\r\n\r\n\r\n[VNSY] Y/T R /[SGT] /(ZR) E /\r\n\r\n(XR) (NE) /(SW) D /(SHW) E /(ZGR) E /\r\n\r\n(BR)E(XW) /S (FY) /(ZT) (BR) /(AE) (DQ) /\r\n\r\n(XW) N /S D /Q  /J  /\r\n\r\n\r\n\r\nX N /S D /(FW) E /(ZR) E /\r\n\r\n[BSFR]EW / Y /[BADT] R /E Q /\r\n\r\n[SFHW] /J H /G F /D S /\r\n\r\n  A /   /   /   /",
+  "settings": {
+    "slotMilliseconds": 125,
+    "arpeggioMilliseconds": 15,
+    "gate": 0.72,
+    "rhythm": {
+      "bpm": 125,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SpaceGrid",
+      "ignoreMeasureNumbers": true
+    },
+    "minimumTriggerIntervalMilliseconds": 100
+  }
+}

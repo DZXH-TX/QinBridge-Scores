@@ -1,0 +1,24 @@
+{
+  "format": "qinbridge.score",
+  "version": 1,
+  "title": "美人鱼 · 沃",
+  "sourceUrl": "",
+  "scoreText": " (CNH) D A D J (BQ) (SJ) (GQ) (SW)\r\n(ZE) B D B (MW) G (SQ) J\r\n(XH) N (AH) (FJ) (BQ) S (MJ)\r\n(NH) D (HT) (JT) W A W J (DQ)\r\n\r\nN X M (AQ) J Q J Q W W\r\nV (AQ) G (HQ) J Q J Q W W\r\nB (XJ) B (MG) H J Q J D H\r\nN X M A W E Y T\r\n\r\nN X M (AQ) J Q J Q W W\r\nV (AQ) G (HQ) J Q J Q W W\r\nB (XJ) B (MG) H J Q J Q H\r\nN X M A Q (NJ) H\r\n\r\nA (GQ) (QD) (GQ) (BQ) J (SJ) J Q J\r\n(VJ) H (AH) H (AH) H (BH) J (SJ) (MJ) S\r\nA (GQ) (DQ) (GQ) (BQ) (GW) (GWS) (GJW) (SGW) (GW)\r\n(VW) E (AQE) (HE) (AW) Q B (GSW) G S\r\n\r\nJ (BG) X B M\r\n\r\nN D (AH) (DJ) (BQ) (SJ) Q (SW)\r\n(ZE) B (AQT) G (MW) G (SQ) (GJ)\r\nN D (AH) (DJ) (BQ) (SJ) Q (SW)\r\n(ZE) B (AQU) G (MT) G (SE) (GW)\r\n\r\n(VQ) A Q N (AH) (BW) (SW) (JE) S\r\n(CQE) M (WU) G (MWT) (NQE) (DW) (AE) (DQ)\r\n(SW) H F H (BE) W S Q M W\r\n(NH) D H J Q H\r\n\r\nN D (AH) (DJ) (BQ) (SJ) Q (SW)\r\n(AE) G (QT) G (MW) G (SQ) (GJ)\r\nN D (AH) (DJ) (BQ) (SJ) Q (SW)\r\n(AE) G (QU) G (MT) G (SE) (GW)\r\n\r\n(VQ) A Q N (AH) (BW) (SW) (JE) S\r\n(CQE) M (WU) G (MWT) (NQE) (DW) (AE) (DQ)\r\n(SW) H F H (BE) W S Q M W\r\n(NH) D H J Q",
+  "settings": {
+    "slotMilliseconds": 125,
+    "arpeggioMilliseconds": 20,
+    "gate": 0.72,
+    "rhythm": {
+      "bpm": 95,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SpaceGrid",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 158
+  }
+}

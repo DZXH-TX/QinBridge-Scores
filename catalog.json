@@ -1,0 +1,174 @@
+{
+  "format": "qinbridge.catalog",
+  "version": 1,
+  "scores": [
+    {
+      "id": "scores/en-US/Court of the Silver Moon · Lullaby of the New Moon.qinscore",
+      "title": "Court of the Silver Moon · Lullaby of the New Moon",
+      "file": "scores/en-US/Court of the Silver Moon · Lullaby of the New Moon.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/Fleeting Light · General.qinscore",
+      "title": "Fleeting Light · General",
+      "file": "scores/en-US/Fleeting Light · General.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/Jingwei.qinscore",
+      "title": "Jingwei",
+      "file": "scores/en-US/Jingwei.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/Let the Wind Tell You · General.qinscore",
+      "title": "Let the Wind Tell You · General",
+      "file": "scores/en-US/Let the Wind Tell You · General.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/Lifeline · General.qinscore",
+      "title": "Lifeline · General",
+      "file": "scores/en-US/Lifeline · General.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/Mandarin Ducks' Play · General.qinscore",
+      "title": "Mandarin Ducks' Play · General",
+      "file": "scores/en-US/Mandarin Ducks' Play · General.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/Ode to the Motherland · General.qinscore",
+      "title": "Ode to the Motherland · General",
+      "file": "scores/en-US/Ode to the Motherland · General.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/Odette Builds a Snowman · Wo.qinscore",
+      "title": "Odette Builds a Snowman · Wo",
+      "file": "scores/en-US/Odette Builds a Snowman · Wo.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/Red High Heels · General.qinscore",
+      "title": "Red High Heels · General",
+      "file": "scores/en-US/Red High Heels · General.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/Super Dimension Princess Kaguya · Descent of the Starry Sea.qinscore",
+      "title": "Super Dimension Princess Kaguya · Descent of the Starry Sea",
+      "file": "scores/en-US/Super Dimension Princess Kaguya · Descent of the Starry Sea.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/The Crimson Actor · General.qinscore",
+      "title": "The Crimson Actor · General",
+      "file": "scores/en-US/The Crimson Actor · General.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/The Little Mermaid · Wo.qinscore",
+      "title": "The Little Mermaid · Wo",
+      "file": "scores/en-US/The Little Mermaid · Wo.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/The Wind Rises · General.qinscore",
+      "title": "The Wind Rises · General",
+      "file": "scores/en-US/The Wind Rises · General.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/en-US/To the Bright Moon · General.qinscore",
+      "title": "To the Bright Moon · General",
+      "file": "scores/en-US/To the Bright Moon · General.qinscore",
+      "language": "en-US"
+    },
+    {
+      "id": "scores/zh-CN/奥黛塔堆雪人 · 沃.qinscore",
+      "title": "奥黛塔堆雪人 · 沃",
+      "file": "scores/zh-CN/奥黛塔堆雪人 · 沃.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/寄明月 · 通用.qinscore",
+      "title": "寄明月 · 通用",
+      "file": "scores/zh-CN/寄明月 · 通用.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/歌唱祖国 · 通用.qinscore",
+      "title": "歌唱祖国 · 通用",
+      "file": "scores/zh-CN/歌唱祖国 · 通用.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/浮光 · 通用.qinscore",
+      "title": "浮光 · 通用",
+      "file": "scores/zh-CN/浮光 · 通用.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/生命线 · 通用.qinscore",
+      "title": "生命线 · 通用",
+      "file": "scores/zh-CN/生命线 · 通用.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/精卫.qinscore",
+      "title": "精卫",
+      "file": "scores/zh-CN/精卫.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/红色高跟鞋 · 通用.qinscore",
+      "title": "红色高跟鞋 · 通用",
+      "file": "scores/zh-CN/红色高跟鞋 · 通用.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/美人鱼 · 沃.qinscore",
+      "title": "美人鱼 · 沃",
+      "file": "scores/zh-CN/美人鱼 · 沃.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/让风告诉你 · 通用.qinscore",
+      "title": "让风告诉你 · 通用",
+      "file": "scores/zh-CN/让风告诉你 · 通用.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/赤伶 · 通用.qinscore",
+      "title": "赤伶 · 通用",
+      "file": "scores/zh-CN/赤伶 · 通用.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/起风了 · 通用.qinscore",
+      "title": "起风了 · 通用",
+      "file": "scores/zh-CN/起风了 · 通用.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/超时空辉夜姬 · 星海降临.qinscore",
+      "title": "超时空辉夜姬 · 星海降临",
+      "file": "scores/zh-CN/超时空辉夜姬 · 星海降临.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/银月之庭 · 新月的摇篮曲.qinscore",
+      "title": "银月之庭 · 新月的摇篮曲",
+      "file": "scores/zh-CN/银月之庭 · 新月的摇篮曲.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/鸳鸯戏 · 通用.qinscore",
+      "title": "鸳鸯戏 · 通用",
+      "file": "scores/zh-CN/鸳鸯戏 · 通用.qinscore",
+      "language": "zh-CN"
+    }
+  ]
+}

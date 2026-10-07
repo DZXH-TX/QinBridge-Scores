@@ -1,0 +1,58 @@
+name: Sync mainland score mirror
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scores/zh-CN/*.qinscore'
+      - 'tools/build_mainland_mirror.py'
+      - 'tools/validate_scores.py'
+      - 'tools/tests/test_mainland_mirror.py'
+      - '.github/workflows/sync-mainland-mirror.yml'
+  # Merges made with GITHUB_TOKEN do not create another push workflow run.
+  workflow_run:
+    workflows: [Score approval and merge]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mainland-score-mirror
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: >-
+      github.repository == 'DZXH-TX/QinBridge-Scores' &&
+      github.ref == 'refs/heads/main' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: DZXH-TX/QinBridge-Scores
+          ref: main
+          persist-credentials: false
+      - name: Test and prepare the Chinese-only payload
+        run: |
+          python3 -I -m unittest discover -s tools/tests -v
+          python3 -I tools/build_mainland_mirror.py --output "$RUNNER_TEMP/qinbridge-mirror"
+      - name: Upload Chinese scores, then publish their catalog
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.RAINYUN_MIRROR_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.RAINYUN_MIRROR_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
+        run: |
+          test -n "$AWS_ACCESS_KEY_ID" && test -n "$AWS_SECRET_ACCESS_KEY" || { echo '::error::Configure the two RAINYUN_MIRROR secrets before running the mirror.'; exit 1; }
+          aws configure set default.s3.addressing_style path
+          aws --endpoint-url https://cn-nb1.rains3.com s3 cp "$RUNNER_TEMP/qinbridge-mirror/scores/zh-CN/" s3://qinbridge-scores-cn/scores/zh-CN/ --recursive --exclude '*' --include '*.qinscore' --content-type 'application/json; charset=utf-8' --cache-control no-cache --only-show-errors
+          aws --endpoint-url https://cn-nb1.rains3.com s3 cp "$RUNNER_TEMP/qinbridge-mirror/catalog.json" s3://qinbridge-scores-cn/catalog.json --content-type 'application/json; charset=utf-8' --cache-control no-cache --only-show-errors
+      - name: Verify public downloads
+        run: |
+          python3 -I tools/build_mainland_mirror.py --output "$RUNNER_TEMP/qinbridge-mirror" --verify-url https://qinbridge-scores-cn.cn-nb1.rains3.com/
+          printf 'Chinese scores and catalog verified through public HTTPS.\n\nSource commit: `%s`\n' "$(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"

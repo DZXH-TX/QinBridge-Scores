@@ -49,6 +49,14 @@ Submit scores through **Pull Requests**. Report bugs, suggestions, or questions 
 
 </details>
 
+## 中国大陆备用下载源
+
+GitHub 是主下载源。中国大陆无法直连时，可使用 [雨云中文镜像](https://qinbridge-scores-cn.cn-nb1.rains3.com/catalog.json)。镜像仅包含 `scores/zh-CN/*.qinscore` 和重新生成的中文 `catalog.json`；英文曲谱、`.source.json` 随谱来源说明、溯源表、源码及其他文档均不上传。
+
+工作流 [Sync mainland score mirror](https://github.com/DZXH-TX/QinBridge-Scores/actions/workflows/sync-mainland-mirror.yml) 在 `main` 的中文曲谱更新、自动合并流程成功完成后同步，也提供 `Run workflow` 手动入口。任务从最新 `main` 构建，经校验后先上传曲谱，再发布目录，最后逐一核对公开 HTTPS 下载内容。运行串行执行，已在目录中移除的歌曲不再出现在镜像目录里；任务不会自动删除桶内旧对象。
+
+维护者在仓库的 Actions Secrets 中配置此镜像桶的 `RAINYUN_MIRROR_ACCESS_KEY_ID` 与 `RAINYUN_MIRROR_SECRET_ACCESS_KEY`。密钥仅在上传步骤使用。镜像地址为 `https://qinbridge-scores-cn.cn-nb1.rains3.com/`，S3 端点为 `https://cn-nb1.rains3.com`。
+
 ## 写出第一份乐谱
 
 推荐先在琴桥中编辑、试听并导出，再提交到仓库。也可以从下面的示例开始：

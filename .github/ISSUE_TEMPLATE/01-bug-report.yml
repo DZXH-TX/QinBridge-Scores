@@ -1,0 +1,55 @@
+name: 报告问题
+description: 反馈琴桥软件故障、在线曲库异常或乐谱错误。
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请描述你遇到的实际问题。新乐谱或已修好的乐谱文件请通过 [Pull Request](https://github.com/DZXH-TX/QinBridge-Scores/compare) 提交，步骤见 [贡献指南](https://github.com/DZXH-TX/QinBridge-Scores/blob/main/CONTRIBUTING.md)。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题发生在哪里？
+      options:
+        - 琴桥软件
+        - 在线曲库 / 下载
+        - 某份乐谱
+        - 不确定
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 琴桥版本与 Windows 版本
+      description: 如果问题与软件无关，可以填写“不适用”。
+      placeholder: "例如：琴桥 0.7.0，Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 实际问题与预期结果
+      placeholder: 我执行了什么操作，实际出现了什么，原本希望出现什么？
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 偶发问题也可以说明当时的操作和出现频率。
+      placeholder: |
+        1. 打开……
+        2. 选择……
+        3. 出现……
+    validations:
+      required: true
+  - type: input
+    id: score
+    attributes:
+      label: 涉及的乐谱 / 游戏 / 乐器（可选）
+      placeholder: 乐谱文件名或链接，以及相关游戏与乐器
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 截图、错误提示或补充说明（可选）
+      description: 可粘贴错误提示或拖入截图；请先遮住账户信息等个人资料。

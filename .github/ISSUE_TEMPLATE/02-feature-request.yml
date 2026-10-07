@@ -1,0 +1,27 @@
+name: 功能与体验建议
+description: 提出琴桥功能、界面、操作体验或曲库管理方面的建议。
+title: "[建议] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎描述你的使用场景和想改进的地方。提交乐谱文件请使用 [Pull Request](https://github.com/DZXH-TX/QinBridge-Scores/compare)。
+  - type: textarea
+    id: context
+    attributes:
+      label: 你在什么场景下需要这项改进？
+      placeholder: 目前的操作哪里不方便，或缺少什么能力？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 你希望如何改进？
+      placeholder: 描述期望的操作方式或结果；不需要提供技术方案。
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考、截图或替代方法（可选）
+      description: 可以补充示意图、参考链接，或目前采用的替代方法。

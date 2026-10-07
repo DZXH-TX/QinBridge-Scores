@@ -1,0 +1,24 @@
+{
+  "format": "qinbridge.score",
+  "version": 1,
+  "title": "入门练习 · 数字谱",
+  "sourceUrl": "",
+  "scoreText": "1 /2 /3 /4 /\n5 /6 /7 /+1 /\n[123] /(1+1) /0 /1 /",
+  "settings": {
+    "slotMilliseconds": 125,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.72,
+    "rhythm": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Numbers",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 150
+  }
+}

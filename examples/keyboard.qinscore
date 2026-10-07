@@ -1,0 +1,24 @@
+{
+  "format": "qinbridge.score",
+  "version": 1,
+  "title": "Getting Started · Keyboard",
+  "sourceUrl": "",
+  "scoreText": "A /S /D /F /\nG /H /J /Q /\n[ASD] /(AQ) /0 /A /",
+  "settings": {
+    "slotMilliseconds": 125,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.72,
+    "rhythm": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 150
+  }
+}

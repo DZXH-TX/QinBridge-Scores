@@ -1,0 +1,25 @@
+name: 使用咨询
+description: 询问软件设置、乐谱格式、在线曲库或 PR 贡献步骤。
+title: "[咨询] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        乐谱投稿步骤见 [贡献指南](https://github.com/DZXH-TX/QinBridge-Scores/blob/main/CONTRIBUTING.md)，JSON 与谱面写法见 [格式说明](https://github.com/DZXH-TX/QinBridge-Scores/blob/main/docs/SCORE-FORMAT.md)。有不清楚的地方可以在这里询问；实际乐谱文件通过 PR 提交。
+  - type: textarea
+    id: question
+    attributes:
+      label: 你想了解什么？
+      placeholder: 描述你想完成的操作，以及不清楚的地方。
+    validations:
+      required: true
+  - type: textarea
+    id: attempted
+    attributes:
+      label: 已尝试的操作或查阅的说明（可选）
+      description: 补充当前停在哪一步，方便直接回答你的问题。
+  - type: input
+    id: environment
+    attributes:
+      label: 相关版本、游戏或乐谱（可选）
+      placeholder: 琴桥版本、Windows 版本，或相关乐谱链接

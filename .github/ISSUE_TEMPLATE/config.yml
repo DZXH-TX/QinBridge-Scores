@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 提交乐谱 · Pull Request
+    url: https://github.com/DZXH-TX/QinBridge-Scores/compare
+    about: 上传新乐谱或提交已有乐谱的修订，请走 PR。
+  - name: 乐谱贡献指南
+    url: https://github.com/DZXH-TX/QinBridge-Scores/blob/main/CONTRIBUTING.md
+    about: 从 Fork、准备文件到生成目录与提交 PR。

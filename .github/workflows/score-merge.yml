@@ -31,7 +31,7 @@ jobs:
           ref: ${{ github.sha }} # workflow_run always uses the trusted default branch
           persist-credentials: false
       - id: gate
-        name: Revalidate current PR using trusted code and a read-only token
+        name: Revalidate scores and optional source notes with a read-only token
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SOURCE_RUN_ID: ${{ github.event.workflow_run.id }}

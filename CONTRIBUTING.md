@@ -1,6 +1,6 @@
 # 贡献乐谱
 
-[返回首页](README.md) · [格式说明](docs/SCORE-FORMAT.md) · [查看 PR](https://github.com/DZXH-TX/QinBridge-Scores/pulls)
+[返回首页](README.md) · [格式说明](docs/SCORE-FORMAT.md) · [许可说明](LICENSE.md) · [查看 PR](https://github.com/DZXH-TX/QinBridge-Scores/pulls)
 
 欢迎分享新乐谱，也欢迎修正错音、节奏和标题。**乐谱文件通过 Pull Request 提交；问题、建议和使用咨询通过 [Issues](https://github.com/DZXH-TX/QinBridge-Scores/issues/new/choose) 反馈。**
 
@@ -12,8 +12,10 @@
 
 - 每个文件保存一首乐谱，使用 UTF-8 JSON。
 - 有来源网页时，将 HTTP(S) 链接填入 `sourceUrl`；没有链接时保留空字符串。
-- 在 PR 说明中补充作者、来源、适用游戏 / 乐器和分发授权情况。不要在 JSON 中自行增加 `author`、`game` 等字段，当前格式不接受这些字段。
+- 在 PR 说明中补充作者、来源、适用游戏 / 乐器和分发授权情况；也可以附上下面介绍的来源说明文件。不要在 `.qinscore` 内自行增加 `author`、`game` 等字段。
 - 一种语言的版本即可提交，不要求同时提供中英文。
+
+乐谱**不强制采用 CC BY-SA 4.0**，也不要求填写许可字段。愿意采用 CC 时，请先确认自己有权作出该授权；未注明 CC 的内容不被默认视为 CC。无论选择何种许可，都应有权公开提交内容并遵守原作者的要求。CI 不进行版权授权判断，具体范围见[许可说明](LICENSE.md)。
 
 ## 2. Fork 仓库并创建分支
 
@@ -34,7 +36,8 @@ git switch -c scores/add-my-song
 ```text
 scores/
 ├── zh-CN/
-│   └── 我的乐谱.qinscore
+│   ├── 我的乐谱.qinscore
+│   └── 我的乐谱.qinscore.source.json    # 可选：来源与署名
 └── en-US/
     └── My Song.qinscore
 ```
@@ -47,6 +50,12 @@ scores/
 文件名应便于识别，文件内的 `title` 使用对应语言。请直接放在语言目录下，不再建立子目录；文件名不要使用 `\ : * ? " < > |`，也不要以 `.` 开头。
 
 修订已有曲目时，直接编辑原文件。若要更换文件名，应移除旧文件，并在下一步重新生成目录。
+
+### 可选：随谱提交来源与署名
+
+可以在同一目录创建 `原文件名.qinscore.source.json`，记录来源链接、原帖标题、作者、补充署名或修改说明。所有字段均为可选；`license` 可以省略，也可以填写其他许可或原作者的实际声明。详见[随谱来源说明格式](docs/SCORE-FORMAT.md#source-notes)。
+
+说明文件不能独立于对应乐谱存在；重命名或删除乐谱时，请一并处理它。说明文件不加入 `catalog.json`，客户端不会读取它。
 
 ## 4. 生成目录并提交
 
@@ -67,7 +76,7 @@ python -I tools/validate_scores.py --workers 4
 如果校验失败，按提示修正乐谱，重新生成目录并提交，再次运行校验。看到类似下面的结果且命令成功退出，就可以推送：
 
 ```json
-{"scores": 29, "bytes": 102400, "data_only": false}
+{"scores": 29, "source_notes": 1, "bytes": 102400, "data_only": false}
 ```
 
 这里的数量与字节数只是示意。未指定 `--base` 时，`data_only` 为 `false` 是正常的，不代表校验失败；GitHub 会在 PR 中比较变更范围。
@@ -92,7 +101,7 @@ PR 标题可以写“新增《曲名》中文乐谱”或“修正《曲名》�
 3. 是否已在琴桥中导入、试听，以及适用的游戏 / 乐器。
 4. 修订已有乐谱时，具体改了什么。
 
-贡献乐谱时，只提交相应 `.qinscore` 和 `catalog.json`。准备好后，将草稿 PR 标记为 **Ready for review**。
+贡献乐谱时，提交相应 `.qinscore`、更新后的 `catalog.json`，以及需要补充的 `.qinscore.source.json`。来源说明可单独在后续 PR 中补充。准备好后，将草稿 PR 标记为 **Ready for review**。
 
 <a id="checks"></a>
 
@@ -104,12 +113,14 @@ PR 标题可以写“新增《曲名》中文乐谱”或“修正《曲名》�
 
 自动流程最多使用 4 个进程并行解析曲谱。只有同时满足以下条件时，PR 才会自动批准、合并：
 
-- 变更仅涉及 `catalog.json`、`scores/zh-CN/*.qinscore`、`scores/en-US/*.qinscore`，且不超过 200 个文件。
-- 完整目录与全部曲谱一致，JSON、谱面和参数校验通过。
+- 变更仅涉及 `catalog.json`、两个语言目录中的 `.qinscore` 及对应的 `.qinscore.source.json`，合计不超过 200 个文件。
+- 完整目录与全部曲谱一致，JSON、谱面和参数校验通过；来源说明通过数据格式、路径关联及资源限制检查。
 - PR 不是草稿，分支已更新至最新 `main`。
 - 没有待处理的“请求更改”，并满足必需检查、审批和会话解决等分支保护规则。
 
 工作流、工具、文档等变更由维护者审核。GitHub 要求首次贡献者授权运行 Actions 时，需要等待维护者批准运行。
+
+**来源说明及 CC 许可均不是必填项。** CI 不要求、识别或验证某一种版权许可；不标 CC、选择其他许可或仅填写署名，不会因此失去自动批准与合并资格。
 
 PR 有新提交后会重新检查，旧批准失效。主分支更新后，请同步最新 `main` 到你的分支，解决冲突、重新生成目录并提交；已修复的审查意见仍需要标记为解决。如果条件满足后合并任务仍未继续，可在 Actions 中重新运行相关检查，或请维护者处理。
 
@@ -117,13 +128,14 @@ PR 有新提交后会重新检查，旧批准失效。主分支更新后，请�
 
 | 提示 / 现象 | 处理方式 |
 | --- | --- |
-| `Unknown JSON fields` | 删除格式未定义的字段；来源、作者等补充信息写在 PR 说明中 |
+| `Unknown JSON fields` | 删除未定义字段；署名等信息写在 PR 或 `.qinscore.source.json` 中，不要加入 `.qinscore` |
 | `Duplicate JSON key` | 同一个对象中不能重复填写同名字段 |
 | `Catalogue must exactly match` | 重新运行 `build_catalog.py`，将曲谱与目录一起提交 |
 | `Invalid keyboard note` / `Invalid numeric note` | 检查记谱方式与 `settings.score.notation` 是否一致 |
 | `Duplicate simultaneous note` | 同一时刻的和弦不能重复触发同一个音符 |
 | 数值、文件大小或分组深度超限 | 对照[格式说明与限制](docs/SCORE-FORMAT.md#limits)调整 |
 | `PR must be updated with main` | 合并最新 `main`，重新生成目录并提交 |
+| `Source note must accompany an existing score` | 确认说明文件名等于对应乐谱的完整文件名加 `.source.json`；删除乐谱时一并删除说明 |
 
 <details>
 <summary>维护者：校验实现与仓库设置</summary>

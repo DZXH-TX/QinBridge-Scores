@@ -4,3 +4,5 @@
 /catalog.json
 /scores/zh-CN/*.qinscore
 /scores/en-US/*.qinscore
+/scores/zh-CN/*.qinscore.source.json
+/scores/en-US/*.qinscore.source.json

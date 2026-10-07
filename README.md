@@ -10,7 +10,7 @@
 
 `.qinscore` · UTF-8 JSON · 中文 / English
 
-[中文乐谱](scores/zh-CN) · [English scores](scores/en-US) · [贡献指南](CONTRIBUTING.md) · [格式说明](docs/SCORE-FORMAT.md)
+[中文乐谱](scores/zh-CN) · [English scores](scores/en-US) · [贡献指南](CONTRIBUTING.md) · [格式说明](docs/SCORE-FORMAT.md) · [许可说明](LICENSE.md)
 
 </div>
 
@@ -23,7 +23,7 @@
 | 🎼 提交乐谱 · Pull Request | 💬 问题反馈 · Issues |
 | --- | --- |
 | 分享新乐谱，或提交已有乐谱的修订。 | 反馈软件故障、功能建议、使用疑问或乐谱问题。 |
-| 随 PR 提交 `.qinscore` 文件与更新后的目录。 | 选择反馈类型，补充现象、步骤或你的想法。 |
+| 随 PR 提交乐谱、目录，也可附上来源与署名说明。 | 选择反馈类型，补充现象、步骤或你的想法。 |
 | **[提交乐谱 PR →](https://github.com/DZXH-TX/QinBridge-Scores/compare)** | **[创建反馈 Issue →](https://github.com/DZXH-TX/QinBridge-Scores/issues/new/choose)** |
 
 第一次贡献乐谱？从 **[贡献指南](CONTRIBUTING.md)** 开始，跟着示例完成 Fork、添加文件、生成目录和提交 PR。
@@ -76,12 +76,27 @@ Submit scores through **Pull Requests**. Report bugs, suggestions, or questions 
 
 ## 校验与合并
 
-提交 PR 后，GitHub Actions 会并行检查 JSON 格式、谱面、参数范围和目录一致性。**仅修改乐谱及目录、通过检查且满足分支保护规则的非草稿 PR，会由机器人批准并合并。**
+提交 PR 后，GitHub Actions 会并行检查 JSON 格式、谱面、参数范围和目录一致性。**仅修改乐谱、目录及可选随谱来源说明，通过检查且满足分支保护规则的非草稿 PR，会由机器人批准并合并。**
 
 校验器只将乐谱作为数据读取，不执行提交中的脚本。工作流、校验器、文档等变更由维护者审核。具体范围、限制和失败处理见[贡献指南](CONTRIBUTING.md#checks)。
+
+## 许可与来源
+
+| 对象 | 使用规则 |
+| --- | --- |
+| 仓库工具与 CI 代码 / 配置 | [标准 MIT](LICENSES/MIT.txt) |
+| 本项目原创文档与示例 | [标准 CC BY-SA 4.0](LICENSES/CC-BY-SA-4.0.txt) |
+| 正式乐谱 | 按各曲目的实际授权；CC 是可选项，CI 不要求或核验 CC |
+| 琴桥软件本体 | [闭源专有软件，仅通过微软商店分发](SOFTWARE-LICENSE.md) |
+
+开发者/发布者：**DZXH CR Tech**<br>
+GitHub 账号：**DZXH-TX**<br>
+说明：DZXH-TX 与 DZXH CR Tech 为同一开发者的 GitHub 账号与微软商店开发者身份。两份标准许可的适用范围见[许可说明](LICENSE.md)。
+
+现有 28 份乐谱的出处、谱面对照和发现的授权声明，记录在[乐谱溯源表](docs/SCORE-PROVENANCE.md)。找到出处不等于取得授权，历史乐谱不会自动套用 CC。
 
 ---
 
 请在乐谱的 `sourceUrl` 中保留来源链接，并在 PR 中说明作者、来源及分发授权情况。只提交你有权公开分享的乐谱。
 
-[曲库目录](catalog.json) · [隐私说明](PRIVACY.md) · [查看 Pull Requests](https://github.com/DZXH-TX/QinBridge-Scores/pulls)
+[曲库目录](catalog.json) · [隐私说明](PRIVACY.md) · [许可说明](LICENSE.md) · [软件条款](SOFTWARE-LICENSE.md) · [查看 Pull Requests](https://github.com/DZXH-TX/QinBridge-Scores/pulls)

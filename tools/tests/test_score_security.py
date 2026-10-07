@@ -9,7 +9,7 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from validate_scores import SCORE_BYTES, strict_json, validate_repository, validate_score
+from validate_scores import SCORE_BYTES, SOURCE_BYTES, strict_json, validate_repository, validate_score, validate_source_note
 import score_automation
 
 
@@ -147,6 +147,71 @@ class RepositoryTests(unittest.TestCase):
         (self.root / "scores/zh-CN/evil.py").write_text("payload", encoding="utf-8")
         with self.assertRaises(ValueError):
             validate_repository(self.commit(), self.base, root=self.root, workers=1)
+
+    def test_optional_source_note_is_auto_eligible_without_any_cc_license(self):
+        note = self.root / (self.path + ".source.json")
+        note.write_bytes(encode({"sourceUrl": "https://example.com/original", "author": "谱面作者"}))
+        result = validate_repository(self.commit(), self.base, root=self.root, workers=2)
+        self.assertTrue(result["data_only"])
+        self.assertEqual(1, result["source_notes"])
+        self.assertEqual(1, result["scores"])
+
+    def test_source_note_accepts_other_license_text_without_verifying_permission(self):
+        note = self.root / (self.path + ".source.json")
+        note.write_bytes(encode({"author": "谱面作者", "license": "未经作者许可不得转载", "notes": "授权情况另行确认"}))
+        self.assertTrue(validate_repository(self.commit(), self.base, root=self.root, workers=1)["data_only"])
+
+    def test_orphan_source_note_is_rejected(self):
+        (self.root / "scores/zh-CN/missing.qinscore.source.json").write_bytes(b'{}')
+        with self.assertRaisesRegex(ValueError, "accompany"):
+            validate_repository(self.commit(), self.base, root=self.root, workers=1)
+
+    def test_source_notes_cannot_hide_executable_fields_or_oversized_blobs(self):
+        note = self.root / (self.path + ".source.json")
+        for raw in (b'{"onLoad":"payload"}', b'{"author":"a","author":"b"}',
+                    b'{"sourceUrl":"javascript:payload"}', b' ' * (SOURCE_BYTES + 1)):
+            note.write_bytes(raw)
+            with self.subTest(raw=raw[:70]), self.assertRaises(ValueError):
+                validate_repository(self.commit(), self.base, root=self.root, workers=1)
+
+    def test_source_note_symlink_and_executable_modes_are_rejected(self):
+        path = self.path + ".source.json"
+        (self.root / path).write_bytes(b'{"author":"A"}')
+        commit = self.commit()
+        oid = self.git("rev-parse", f"{commit}:{path}")
+        for mode in ("120000", "100755"):
+            self.git("update-index", "--cacheinfo", mode, oid, path)
+            tree = self.git("write-tree")
+            head = self.git("commit-tree", tree, "-p", commit, "-m", "untrusted source mode")
+            with self.subTest(mode=mode), self.assertRaisesRegex(ValueError, "non-executable"):
+                validate_repository(head, self.base, root=self.root, workers=1)
+
+    def test_deleting_optional_source_note_remains_auto_eligible(self):
+        note = self.root / (self.path + ".source.json")
+        note.write_bytes(b'{"author":"A"}')
+        with_note = self.commit()
+        note.unlink()
+        result = validate_repository(self.commit(), with_note, root=self.root, workers=1)
+        self.assertTrue(result["data_only"])
+        self.assertEqual(0, result["source_notes"])
+
+    def test_sidecar_does_not_make_an_infrastructure_change_auto_eligible(self):
+        (self.root / (self.path + ".source.json")).write_bytes(b'{"author":"A"}')
+        (self.root / "README.md").write_text("Changed policy", encoding="utf-8")
+        result = validate_repository(self.commit(), self.base, root=self.root, workers=1)
+        self.assertFalse(result["data_only"])
+
+
+class SourceNoteTests(unittest.TestCase):
+    def test_license_can_be_omitted_empty_or_any_plain_text(self):
+        for note in ({}, {"author": "作者"}, {"license": ""}, {"license": "CC BY-SA 4.0"}, {"license": "All rights reserved"}):
+            with self.subTest(note=note):
+                self.assertEqual(note, validate_source_note(encode(note)))
+
+    def test_fields_are_text_not_executable_objects(self):
+        for note in ({"author": {"$type": "Process"}}, {"license": ["CC BY-SA 4.0"]}, {"notes": "\n::warning::payload"}):
+            with self.subTest(note=note), self.assertRaises(ValueError):
+                validate_source_note(encode(note))
 
 
 class ApprovalTests(unittest.TestCase):

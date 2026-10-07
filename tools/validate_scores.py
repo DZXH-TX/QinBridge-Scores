@@ -14,6 +14,8 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 SCORE_BYTES = 4 * 1024 * 1024
 CATALOG_BYTES = 1024 * 1024
+SOURCE_BYTES = 64 * 1024
+SOURCE_SUFFIX = ".source.json"
 MAX_SCORES = 2000
 TOTAL_BYTES = 64 * 1024 * 1024
 KEYS = "ZXCVBNMASDFGHJQWERTYU"
@@ -84,6 +86,26 @@ def text_field(value, limit, empty=False):
 def bounded_number(value, minimum, maximum):
     require(type(value) in (int, float) and math.isfinite(value) and minimum <= value <= maximum,
             "Number outside permitted range")
+
+
+def source_url(value):
+    text_field(value, 2048, empty=True)
+    if value:
+        url = urlsplit(value)
+        require(url.scheme in ("http", "https") and bool(url.hostname) and not url.username and not url.password,
+                "Source must be an HTTP(S) URL")
+
+
+def validate_source_note(raw):
+    """Read optional provenance as inert data; do not require or verify a license."""
+    note = strict_json(raw, SOURCE_BYTES)
+    limits = {"sourceUrl": 2048, "sourceTitle": 256, "author": 256,
+              "credit": 2048, "license": 2048, "notes": 4096}
+    shape(note, limits)
+    for key, value in note.items():
+        text_field(value, limits[key], empty=True)
+    source_url(note.get("sourceUrl", ""))
+    return note
 
 
 def score_path(path):
@@ -178,11 +200,7 @@ def validate_score(raw):
           ("format", "version", "title", "scoreText", "settings"))
     require(score["format"] == "qinbridge.score" and type(score["version"]) is int and score["version"] == 1, "Unsupported score format/version")
     text_field(score["title"], 256)
-    source = score.get("sourceUrl", "")
-    text_field(source, 2048, empty=True)
-    if source:
-        url = urlsplit(source)
-        require(url.scheme in ("http", "https") and bool(url.hostname) and not url.username and not url.password, "Source must be an HTTP(S) URL")
+    source_url(score.get("sourceUrl", ""))
     settings = score["settings"]
     shape(settings, ("slotMilliseconds", "arpeggioMilliseconds", "gate", "rhythm", "score", "minimumTriggerIntervalMilliseconds"))
     bounded_number(settings.get("slotMilliseconds", 125), 20, 2000)
@@ -228,7 +246,11 @@ def tree(ref, root=ROOT):
 def _validate_blob(item):
     root, path, oid = item
     try:
-        return path, validate_score(git("cat-file", "blob", oid, root=root))["title"]
+        raw = git("cat-file", "blob", oid, root=root)
+        if path.endswith(SOURCE_SUFFIX):
+            validate_source_note(raw)
+            return path, None
+        return path, validate_score(raw)["title"]
     except (ValueError, UnicodeError) as error:
         raise ValueError(repr(path) + ": " + str(error)) from error
 
@@ -237,38 +259,47 @@ def validate_repository(ref, base=None, root=ROOT, workers=4):
     require(1 <= workers <= 4, "Worker count must be between 1 and 4")
     entries = tree(ref, root)
     require("catalog.json" in entries, "Missing catalog.json")
-    scores = sorted(path for path in entries if path.startswith("scores/") and path != "scores/.gitkeep")
+    data_paths = sorted(path for path in entries if path.startswith("scores/") and path != "scores/.gitkeep")
+    sources = [path for path in data_paths if path.endswith(SOURCE_SUFFIX)]
+    scores = [path for path in data_paths if not path.endswith(SOURCE_SUFFIX)]
     require(len(scores) <= MAX_SCORES, "Too many scores")
+    for path in sources:
+        score_path(path.removesuffix(SOURCE_SUFFIX))
+        require(path.removesuffix(SOURCE_SUFFIX) in scores, "Source note must accompany an existing score")
     total = 0
-    for path in ["catalog.json", *scores]:
+    for path in ["catalog.json", *data_paths]:
         if path != "catalog.json":
-            score_path(path)
+            score_path(path.removesuffix(SOURCE_SUFFIX))
         mode, kind, _, size = entries[path]
         require(mode == "100644" and kind == "blob", "Score data must be regular non-executable files")
-        require(0 <= size <= (CATALOG_BYTES if path == "catalog.json" else SCORE_BYTES), "File exceeds byte limit")
+        maximum = CATALOG_BYTES if path == "catalog.json" else SOURCE_BYTES if path.endswith(SOURCE_SUFFIX) else SCORE_BYTES
+        require(0 <= size <= maximum, "File exceeds byte limit")
         total += size
     require(total <= TOTAL_BYTES, "Catalogue exceeds total byte budget")
     catalog = strict_json(git("cat-file", "blob", entries["catalog.json"][2], root=root), CATALOG_BYTES)
     shape(catalog, ("format", "version", "scores"), ("format", "version", "scores"))
     require(catalog["format"] == "qinbridge.catalog" and type(catalog["version"]) is int and catalog["version"] == 1, "Unsupported catalogue format/version")
     require(type(catalog["scores"]) is list and len(catalog["scores"]) <= MAX_SCORES, "Invalid catalogue entries")
-    jobs = [(str(root), path, entries[path][2]) for path in scores]
+    jobs = [(str(root), path, entries[path][2]) for path in data_paths]
     if workers == 1:
         parsed = list(map(_validate_blob, jobs))
     else:
         with ProcessPoolExecutor(max_workers=workers) as pool:
             parsed = list(pool.map(_validate_blob, jobs, chunksize=1))
-    expected = [{"id": path, "title": title, "file": path, "language": score_path(path)} for path, title in parsed]
+    expected = [{"id": path, "title": title, "file": path, "language": score_path(path)} for path, title in parsed if title is not None]
     require(catalog["scores"] == expected, "Catalogue must exactly match the sorted score files, titles, IDs, and languages; run tools/build_catalog.py")
     data_only = False
     if base:
         before = tree(base, root)
         changed = {path for path in entries.keys() | before.keys() if entries.get(path) != before.get(path)}
-        data_only = 0 < len(changed) <= 200 and all(path == "catalog.json" or path in scores or (path in before and path.startswith("scores/") and path.endswith(".qinscore")) for path in changed)
+        data_only = 0 < len(changed) <= 200
         for path in changed:
             if path != "catalog.json" and data_only:
-                score_path(path)
-    return {"scores": len(scores), "bytes": total, "data_only": data_only}
+                try:
+                    score_path(path.removesuffix(SOURCE_SUFFIX))
+                except ValueError:
+                    data_only = False
+    return {"scores": len(scores), "source_notes": len(sources), "bytes": total, "data_only": data_only}
 
 
 def main():

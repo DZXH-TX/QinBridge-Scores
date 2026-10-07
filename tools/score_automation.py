@@ -105,7 +105,7 @@ def publish():
     existing = latest.get("github-actions[bot]", {})
     if existing.get("state") != "APPROVED" or existing.get("commit_id") != head:
         api(f"pulls/{number}/reviews", "POST", {"event": "APPROVE", "commit_id": head,
-            "body": "此提交仅修改曲谱数据，已通过主分支校验器的 JSON、谱面、目录一致性和资源限制检查。"})
+            "body": "此提交仅修改曲谱、目录或随谱来源说明，已通过主分支校验器的 JSON、谱面、目录一致性和资源限制检查。来源说明为可选数据；此检查不要求或核验 CC 等版权许可。"})
     # Give GitHub time to recompute required checks after the status/review writes.
     for attempt in range(6):
         current_pr(number, head, base)

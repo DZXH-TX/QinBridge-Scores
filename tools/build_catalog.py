@@ -1,26 +1,30 @@
-"""Build the downloadable catalogue from exported .qinscore files (Python 3)."""
+"""Build catalog.json only after all local score files pass data validation."""
 import json
 from pathlib import Path
+import sys
 
-ROOT = Path(__file__).resolve().parents[1]
-entries = []
-for path in sorted((ROOT / "scores").rglob("*.qinscore")):
-    if path.stat().st_size > 4 * 1024 * 1024:
-        raise ValueError(f"Score exceeds 4 MB: {path.name}")
-    score = json.loads(path.read_text(encoding="utf-8-sig"))
-    if score.get("format") != "qinbridge.score" or score.get("version") != 1:
-        raise ValueError(f"Unsupported score format: {path.name}")
-    if not isinstance(score.get("title"), str) or not score["title"].strip():
-        raise ValueError(f"Missing title: {path.name}")
-    if not isinstance(score.get("scoreText"), str) or not score["scoreText"].strip():
-        raise ValueError(f"Missing score text: {path.name}")
-    if not isinstance(score.get("settings"), dict):
-        raise ValueError(f"Missing settings: {path.name}")
-    relative = path.relative_to(ROOT).as_posix()
-    language = path.relative_to(ROOT / "scores").parts[0]
-    if language not in ("zh-CN", "en-US"):
-        raise ValueError(f"Put the score in scores/zh-CN or scores/en-US: {relative}")
-    entries.append({"id": relative, "title": score["title"], "file": relative, "language": language})
-catalog = {"format": "qinbridge.catalog", "version": 1, "scores": entries}
-(ROOT / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(f"Catalog updated: {len(entries)} scores")
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from validate_scores import ROOT, SCORE_BYTES, CATALOG_BYTES, MAX_SCORES, TOTAL_BYTES, require, score_path, validate_score
+
+
+def main():
+    entries = []
+    total = 0
+    for path in sorted((ROOT / "scores").rglob("*.qinscore")):
+        relative = path.relative_to(ROOT).as_posix()
+        language = score_path(relative)
+        require(not any(part.is_symlink() for part in [path, *path.parents] if part != ROOT), "Symlinks are not allowed")
+        with path.open("rb") as stream:
+            raw = stream.read(SCORE_BYTES + 1)
+        total += len(raw)
+        require(total <= TOTAL_BYTES and len(entries) < MAX_SCORES, "Catalogue exceeds resource limits")
+        score = validate_score(raw)
+        entries.append({"id": relative, "title": score["title"], "file": relative, "language": language})
+    output = (json.dumps({"format": "qinbridge.catalog", "version": 1, "scores": entries}, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    require(len(output) <= CATALOG_BYTES and total + len(output) <= TOTAL_BYTES, "Catalogue exceeds byte limit")
+    (ROOT / "catalog.json").write_bytes(output)
+    print(f"Catalog updated: {len(entries)} validated scores")
+
+
+if __name__ == "__main__":
+    main()

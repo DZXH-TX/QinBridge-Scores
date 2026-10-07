@@ -1,0 +1,62 @@
+name: Score approval and merge
+
+on:
+  workflow_run:
+    workflows: [Score checks]
+    types: [completed]
+
+permissions: {}
+
+concurrency:
+  group: score-merge-${{ github.event.workflow_run.head_sha }}
+  cancel-in-progress: false
+
+jobs:
+  revalidate:
+    if: github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+      pull-requests: read
+    outputs:
+      number: ${{ steps.gate.outputs.number }}
+      head: ${{ steps.gate.outputs.head }}
+      base: ${{ steps.gate.outputs.base }}
+      eligible: ${{ steps.gate.outputs.eligible }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.sha }} # workflow_run always uses the trusted default branch
+          persist-credentials: false
+      - id: gate
+        name: Revalidate current PR using trusted code and a read-only token
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SOURCE_RUN_ID: ${{ github.event.workflow_run.id }}
+        run: python3 -I tools/score_automation.py validate-run
+
+  approve-and-merge:
+    needs: revalidate
+    if: always() && needs.revalidate.outputs.number != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pull-requests: write
+      statuses: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Publish required status and approve only the validated commit
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ needs.revalidate.outputs.number }}
+          HEAD_SHA: ${{ needs.revalidate.outputs.head }}
+          BASE_SHA: ${{ needs.revalidate.outputs.base }}
+          AUTO_ELIGIBLE: ${{ needs.revalidate.outputs.eligible }}
+          VALIDATION_RESULT: ${{ needs.revalidate.result }}
+        run: python3 -I tools/score_automation.py publish

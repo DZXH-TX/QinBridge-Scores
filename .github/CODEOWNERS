@@ -1,0 +1,6 @@
+# Infrastructure and every other file require the repository owner's review.
+* @DZXH-TX
+# Validated score data can receive the automated review instead.
+/catalog.json
+/scores/zh-CN/*.qinscore
+/scores/en-US/*.qinscore

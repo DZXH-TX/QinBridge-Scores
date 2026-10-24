@@ -1,0 +1,24 @@
+{
+  "format": "qinbridge.score",
+  "version": 1,
+  "title": "义勇军进行曲 · 通用",
+  "sourceUrl": "https://english.www.gov.cn/archive/chinaabc/202409/01/content_WS66d3ced4c6d0868f4e8ea6bb.html",
+  "scoreText": "(ZADQ)   (DE)/(BADGT)(GT)/\n(VAFHY)/(BADGT)/\n(ZADE)   (AQ)/(BMSGT)(GT)(GT)/\n(CADE)/(ZADQ)/\n(BMSFG)G(MSFG)/(XMSFG)G(MSFG)/\n(ZBADQ)/0G/\n(ZQ)(BAD)/B(BADQ)/\n(NQ)  (NAD)Q/(BG)  (BMSH)J/\n(CQ)(BAD)/(ZQ)(BAD)/\nZ(BADE)/(BQ)  (BADW)E/\n(ZT)(BAD)/(BT)(BAD)/\n(ZE)  (BAD)E/(NQ)  (NAD)E/\n(CT)  (BAD)E/(BW)(MSF)/\n(BMSW)  (BS)(BS)/(BMSF)  (BS)(BS)/\n(VY)(NAF)/(CT)(BAD)/\n(XW)(NSF)/(CE)(BAD)/\n(ZT)(BADE)/B(BADT)/\n(CE)  (BMDW)E/(NQ)(NAD)/\n(NADE)/0/\n(BG)  (MSF)H/(ZQ)(BADQ)/\n(CE)  (BMD)E/(NT)(NADT)/\n(XW)  (NSFW)W/(NH)(NAD)/\n(BMSFW)(MSF)(MSF)/(XMSF)(MSFG)/\n(ZADQ)  (AD)(AD)/(BAD)(BADQ)/\n(CADE)  (AD)(AD)/(BAD)(BADE)/\n(BMSFT)  SF/(XMSF)SFM/\n(ZADQ)  (BAD)(DE)/(BADGT)(BADGT)/\n(VAFHY)(NAF)/(BADGT)(BAD)/\n(ZADE)  (BAD)(AQ)/(BMSGT)(GT)(BMSGT)/\n(ZADE)/(BADQ)/\n(BSFG)(MSF)(MSF)/(ZADQ)/\n(ZADE)  (BAD)(AQ)/(BMSGT)(GT)(BMSGT)/\n(ZADE)/(BADQ)/\n(BSFG)(MSF)(MSF)/(ZADQ)/\n(BSFG)(MSF)(MSF)/(ZADQ)/\n(BSFG)(MSF)(MSF)/(ZADQ)/\n(ZBDGQ)/0/",
+  "settings": {
+    "slotMilliseconds": 156.25,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.72,
+    "rhythm": {
+      "bpm": 96,
+      "beatsPerBar": 2,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 150
+  }
+}

@@ -87,6 +87,12 @@
       "language": "en-US"
     },
     {
+      "id": "scores/zh-CN/千本樱 · 通用.qinscore",
+      "title": "千本樱 · 通用",
+      "file": "scores/zh-CN/千本樱 · 通用.qinscore",
+      "language": "zh-CN"
+    },
+    {
       "id": "scores/zh-CN/奥黛塔堆雪人 · 沃.qinscore",
       "title": "奥黛塔堆雪人 · 沃",
       "file": "scores/zh-CN/奥黛塔堆雪人 · 沃.qinscore",
@@ -172,4 +178,3 @@
     }
   ]
 }
-

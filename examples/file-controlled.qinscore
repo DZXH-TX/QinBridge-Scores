@@ -1,0 +1,31 @@
+{
+  "format": "qinbridge.score",
+  "version": 2,
+  "title": "Getting Started · File-Controlled",
+  "sourceUrl": "",
+  "scoreText": "1 2 3 4 /5 6 7 +1 /+2 +3 +4 /5 /",
+  "settings": {
+    "slotMilliseconds": 125,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.72,
+    "rhythm": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Numbers",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 150
+  },
+  "playbackControl": {
+    "bpm": 90,
+    "timing": "SlashBeats",
+    "gate": 0.6,
+    "arpeggioMilliseconds": 12,
+    "minimumTriggerIntervalMilliseconds": 120
+  }
+}

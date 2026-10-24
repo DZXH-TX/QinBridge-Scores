@@ -1,0 +1,400 @@
+[
+  {
+    "name": "legacy_unchanged",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":1,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "bpm_only",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80}}",
+    "effective": {
+      "bpm": 80,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "partial_meter",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"beatsPerBar\":3}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 3,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "partial_beat_unit",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"beatUnit\":8}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 8,
+      "unitsPerBeat": 4,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "subdivisions_only",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"unitsPerBeat\":3}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 3,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "timing_and_gate",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"timing\":\"SlashBeats\",\"gate\":0.88}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.88,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "explicit_false_owns_field",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"ignoreMeasureNumbers\":false}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "all_owned_fields",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80,\"beatsPerBar\":3,\"beatUnit\":8,\"unitsPerBeat\":2,\"timing\":\"SlashBeats\",\"arpeggioMilliseconds\":40,\"minimumTriggerIntervalMilliseconds\":120,\"gate\":0.86,\"ignoreMeasureNumbers\":true}}",
+    "effective": {
+      "bpm": 80,
+      "beatsPerBar": 3,
+      "beatUnit": 8,
+      "unitsPerBeat": 2,
+      "timing": "SlashBeats",
+      "arpeggioMilliseconds": 40,
+      "minimumTriggerIntervalMilliseconds": 120,
+      "gate": 0.86,
+      "ignoreMeasureNumbers": true
+    }
+  },
+  {
+    "name": "upper_bounds",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":1000,\"beatsPerBar\":12,\"beatUnit\":16,\"unitsPerBeat\":1,\"arpeggioMilliseconds\":100,\"minimumTriggerIntervalMilliseconds\":300,\"gate\":0.95}}",
+    "effective": {
+      "bpm": 1000,
+      "beatsPerBar": 12,
+      "beatUnit": 16,
+      "unitsPerBeat": 1,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 100,
+      "minimumTriggerIntervalMilliseconds": 300,
+      "gate": 0.95,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "lower_bounds",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":4,\"beatsPerBar\":1,\"beatUnit\":2,\"unitsPerBeat\":8,\"arpeggioMilliseconds\":1,\"minimumTriggerIntervalMilliseconds\":30,\"gate\":0.1}}",
+    "effective": {
+      "bpm": 4,
+      "beatsPerBar": 1,
+      "beatUnit": 2,
+      "unitsPerBeat": 8,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 1,
+      "minimumTriggerIntervalMilliseconds": 30,
+      "gate": 0.1,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "fallback_rhythm_uses_slot",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":200,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":null,\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"beatsPerBar\":3}}",
+    "effective": {
+      "bpm": 75,
+      "beatsPerBar": 3,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "partial_high_bpm_with_valid_baseline",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":1},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":1000}}",
+    "effective": {
+      "bpm": 1000,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 1,
+      "timing": "SpaceGrid",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "ignoreMeasureNumbers": false
+    }
+  },
+  {
+    "name": "reading_override_is_applied",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"BPM:120 4/4\\n1/2/3/4/99\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Numbers\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"ignoreMeasureNumbers\":true,\"timing\":\"SlashBeats\"}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "ignoreMeasureNumbers": true
+    }
+  },
+  {
+    "name": "empty",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{}}"
+  },
+  {
+    "name": "unknown",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"script\":\"run\"}}"
+  },
+  {
+    "name": "null_field",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":null}}"
+  },
+  {
+    "name": "number_string",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":\"80\"}}"
+  },
+  {
+    "name": "boolean_number",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"arpeggioMilliseconds\":true}}"
+  },
+  {
+    "name": "invalid_bpm",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":0}}"
+  },
+  {
+    "name": "invalid_beats",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"beatsPerBar\":13}}"
+  },
+  {
+    "name": "fractional_beats",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"beatsPerBar\":3.0}}"
+  },
+  {
+    "name": "boolean_beats",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"beatsPerBar\":true}}"
+  },
+  {
+    "name": "invalid_unit",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"beatUnit\":3}}"
+  },
+  {
+    "name": "invalid_subdivisions",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"unitsPerBeat\":5}}"
+  },
+  {
+    "name": "invalid_timing",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"timing\":\"由脚本控制\"}}"
+  },
+  {
+    "name": "case_timing",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"timing\":\"spacegrid\"}}"
+  },
+  {
+    "name": "integer_timing",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"timing\":0}}"
+  },
+  {
+    "name": "invalid_arpeggio",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"arpeggioMilliseconds\":101}}"
+  },
+  {
+    "name": "invalid_trigger",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"minimumTriggerIntervalMilliseconds\":301}}"
+  },
+  {
+    "name": "invalid_gate",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"gate\":0.96}}"
+  },
+  {
+    "name": "boolean_option_string",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"ignoreMeasureNumbers\":\"false\"}}"
+  },
+  {
+    "name": "combined_grid_too_short",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":1000}}"
+  },
+  {
+    "name": "baseline_invalid_even_if_overridden",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":0,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80}}"
+  },
+  {
+    "name": "version_one_with_control",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":1,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80}}"
+  },
+  {
+    "name": "version_one_null_control",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":1,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":null}"
+  },
+  {
+    "name": "version_two_missing_control",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150}}"
+  },
+  {
+    "name": "version_two_null_control",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":null}"
+  },
+  {
+    "name": "unknown_version",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":3,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80}}"
+  },
+  {
+    "name": "fractional_version",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2.0,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80}}"
+  },
+  {
+    "name": "boolean_version",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":true,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80}}"
+  },
+  {
+    "name": "string_version",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":\"2\",\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80}}"
+  },
+  {
+    "name": "unknown_top_level",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80},\"onLoad\":\"execute\"}"
+  },
+  {
+    "name": "unknown_settings",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150,\"script\":\"execute\"},\"playbackControl\":{\"bpm\":80}}"
+  },
+  {
+    "name": "case_control_field",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"Bpm\":80}}"
+  },
+  {
+    "name": "duplicate_field",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80,\"bpm\":90}}"
+  },
+  {
+    "name": "nonfinite_value",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":1e999}}"
+  },
+  {
+    "name": "long_number",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"gate\":0.700000000000000000000000000000000000}}"
+  },
+  {
+    "name": "ignored_control_member",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80,\"isEmpty\":false}}"
+  },
+  {
+    "name": "ignored_top_member",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80},\"effectiveSettings\":{}}"
+  },
+  {
+    "name": "ignored_settings_member",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150,\"unitMilliseconds\":125},\"playbackControl\":{\"bpm\":80}}"
+  },
+  {
+    "name": "ignored_rhythm_member",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Control conformance\",\"sourceUrl\":\"\",\"scoreText\":\"ASD\",\"settings\":{\"slotMilliseconds\":125,\"arpeggioMilliseconds\":18,\"gate\":0.72,\"rhythm\":{\"bpm\":120,\"beatsPerBar\":4,\"beatUnit\":4,\"unitsPerBeat\":4,\"signature\":\"4/4\"},\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SpaceGrid\",\"ignoreMeasureNumbers\":false},\"minimumTriggerIntervalMilliseconds\":150},\"playbackControl\":{\"bpm\":80}}"
+  }
+]

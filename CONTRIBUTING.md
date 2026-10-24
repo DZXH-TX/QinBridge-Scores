@@ -6,16 +6,27 @@
 
 ## 1. 准备一份可用的乐谱
 
-在琴桥中编辑曲目并试听，保存谱面与节奏设置，然后在「曲谱文件」页面导出 `.qinscore`。
+在琴桥中编辑曲目并试听，保存谱面与节奏设置，然后在「曲谱文件」页面导出 `.qinscore`。如果使用了文件控制播放参数，导出文件会是 `version: 2` 并包含 `playbackControl`；该功能计划随琴桥 0.10.0 提供，当前仍在开发、尚未发布。
 
-文件需要保留标题、谱面和演奏设置。如果手工编写，可以参考[数字谱示例](examples/numbers.qinscore)、[键盘谱示例](examples/keyboard.qinscore)和[字段说明](docs/SCORE-FORMAT.md)。
+文件需要保留标题、谱面和演奏设置；使用文件控制时，还要保留顶层 `playbackControl` 和有效的 `settings` 基线。如果手工编写，可以参考[数字谱示例](examples/numbers.qinscore)、[键盘谱示例](examples/keyboard.qinscore)、[文件控制示例](examples/file-controlled.qinscore)和[字段说明](docs/SCORE-FORMAT.md)。
 
 - 每个文件保存一首乐谱，使用 UTF-8 JSON。
 - 有来源网页时，将 HTTP(S) 链接填入 `sourceUrl`；没有链接时保留空字符串。
-- 在 PR 说明中补充作者、来源、适用游戏 / 乐器和分发授权情况；也可以附上下面介绍的来源说明文件。不要在 `.qinscore` 内自行增加 `author`、`game` 等字段。
+- 在 PR 说明中补充作者、来源、适用游戏 / 乐器和分发授权情况；也可以附上下面介绍的来源说明文件。不要在 `.qinscore` 内自行增加 `author`、`game` 等字段；唯一允许的额外字段是 v2 的 `playbackControl`，且只能使用[格式说明](docs/SCORE-FORMAT.md#playback-control)中列出的子字段。
 - 一种语言的版本即可提交，不要求同时提供中英文。
 
 乐谱**不强制采用 CC BY-SA 4.0**，也不要求填写许可字段。愿意采用 CC 时，请先确认自己有权作出该授权；未注明 CC 的内容不被默认视为 CC。无论选择何种许可，都应有权公开提交内容并遵守原作者的要求。CI 不进行版权授权判断，具体范围见[许可说明](LICENSE.md)。
+
+### 可选：文件控制播放参数（v2）
+
+`version: 2` 的文件用顶层 `playbackControl` 声明要接管的播放参数。播放、预览和摘要都按“文件 `playbackControl` 覆盖值 > 当前可编辑设置（初值为 `settings`）”取值；只有出现的字段会被接管和锁定，未出现的字段仍可编辑。拍号分子 `beatsPerBar` 与分母 `beatUnit` 可分别控制。节奏被接管时界面文字显示“由脚本控制”，但底层仍按 `timing` 枚举计时，这不是 Lua/JS 执行脚本。
+
+- 普通文件保持 `version: 1`，且不能出现 `playbackControl`（包括 `null`）。
+- v2 必须包含至少一个字段的 `playbackControl`；缺失、`null` 或空对象都无效。
+- 已提供字段不能为 `null`；未知字段、重复键、数值字符串、非有限数、把布尔当数值、错误枚举都会导致检查失败。
+- `settings` 仍是必须有效的基线；合并后的每格时长 `60000 / bpm / unitsPerBeat` 必须在 20–2000 毫秒内。
+
+完整示例见[文件控制示例](examples/file-controlled.qinscore)。不要为了让旧版校验器通过而降级为 v1 或删除控制字段。
 
 ## 2. Fork 仓库并创建分支
 
@@ -71,6 +82,8 @@ python -I tools/validate_scores.py --workers 4
 
 `build_catalog.py` 会检查工作区的乐谱并生成 `catalog.json`，目录中的 ID、标题、路径和语言由脚本填写，不需要手工编辑。
 
+提交 v2 文件前，请先同步本仓库最新的 `main`，确认本地校验器已包含 v2/`playbackControl` 支持；旧校验器会以 `Unsupported score format/version` 或 `Unknown JSON fields` 拒绝新文件。`catalog.json` 仍为 `version: 1`，不要改为 2。
+
 **最后一条命令验证的是刚刚创建的 Git 提交。** 所以要先 `git commit`，再运行它；只修改文件而未提交时，它仍会读取旧版本。
 
 如果校验失败，按提示修正乐谱，重新生成目录并提交，再次运行校验。看到类似下面的结果且命令成功退出，就可以推送：
@@ -99,7 +112,8 @@ PR 标题可以写“新增《曲名》中文乐谱”或“修正《曲名》�
 1. 新增或修订了哪些曲目。
 2. 作者、来源链接与分发授权情况。
 3. 是否已在琴桥中导入、试听，以及适用的游戏 / 乐器。
-4. 修订已有乐谱时，具体改了什么。
+4. 如使用 `playbackControl`，说明接管了哪些字段、为什么，并确认导出文件完整保留了这些字段。
+5. 修订已有乐谱时，具体改了什么。
 
 贡献乐谱时，提交相应 `.qinscore`、更新后的 `catalog.json`，以及需要补充的 `.qinscore.source.json`。来源说明可单独在后续 PR 中补充。准备好后，将草稿 PR 标记为 **Ready for review**。
 
@@ -114,11 +128,12 @@ PR 标题可以写“新增《曲名》中文乐谱”或“修正《曲名》�
 自动流程最多使用 4 个进程并行解析曲谱。只有同时满足以下条件时，PR 才会自动批准、合并：
 
 - 变更仅涉及 `catalog.json`、两个语言目录中的 `.qinscore` 及对应的 `.qinscore.source.json`，合计不超过 200 个文件。
-- 完整目录与全部曲谱一致，JSON、谱面和参数校验通过；来源说明通过数据格式、路径关联及资源限制检查。
+- 完整目录与全部曲谱一致，JSON、版本、`playbackControl`、谱面和参数校验通过；来源说明通过数据格式、路径关联及资源限制检查。
+- v1 文件不含 `playbackControl`；v2 文件包含至少一个合法字段，且合并后的每格时长在 20–2000 毫秒内。
 - PR 不是草稿，分支已更新至最新 `main`。
 - 没有待处理的“请求更改”，并满足必需检查、审批和会话解决等分支保护规则。
 
-工作流、工具、文档等变更由维护者审核。GitHub 要求首次贡献者授权运行 Actions 时，需要等待维护者批准运行。
+工作流、工具、文档等变更由维护者审核。校验器对 v2 的支持必须先作为基础设施变更由维护者审核并合并到 `main`，之后才能提交 v2 正式曲谱；基础设施 PR 不会被自动批准或合并。GitHub 要求首次贡献者授权运行 Actions 时，需要等待维护者批准运行。
 
 **来源说明及 CC 许可均不是必填项。** CI 不要求、识别或验证某一种版权许可；不标 CC、选择其他许可或仅填写署名，不会因此失去自动批准与合并资格。
 
@@ -128,7 +143,9 @@ PR 有新提交后会重新检查，旧批准失效。主分支更新后，请�
 
 | 提示 / 现象 | 处理方式 |
 | --- | --- |
-| `Unknown JSON fields` | 删除未定义字段；署名等信息写在 PR 或 `.qinscore.source.json` 中，不要加入 `.qinscore` |
+| `Unknown JSON fields` | 删除未定义字段；署名等信息写在 PR 或 `.qinscore.source.json` 中。`.qinscore` 里唯一允许的扩展字段是 v2 的 `playbackControl`，且只能用文档列出的子字段 |
+| `Unsupported score format/version` | 带 `playbackControl` 的文件必须是 `version: 2`，普通文件保持 `1`；旧版客户端或旧校验器不支持 v2，请先同步/更新到包含 v2 支持的版本 |
+| `Version 2 requires nonempty playbackControl` / `File control must contain non-null parameters` | 确认 `playbackControl` 至少有一个字段、没有 `null`；再按提示检查类型、范围和合并后的每格时长 |
 | `Duplicate JSON key` | 同一个对象中不能重复填写同名字段 |
 | `Catalogue must exactly match` | 重新运行 `build_catalog.py`，将曲谱与目录一起提交 |
 | `Invalid keyboard note` / `Invalid numeric note` | 检查记谱方式与 `settings.score.notation` 是否一致 |
@@ -142,6 +159,8 @@ PR 有新提交后会重新检查，旧批准失效。主分支更新后，请�
 
 `Score checks` 使用只读权限。独立的 `workflow_run` 流程从主分支加载校验器，重新验证当前 PR 的固定提交。候选文件只从 Git blob 读取，不检出或执行 PR 中的脚本，也不读取上游工作流的产物或缓存。批准任务只接收固定 SHA 和校验结论，并在提交审批和合并时再次核对 PR。
 
+`playbackControl` 的校验支持必须先合入 `main`（基础设施 PR，人工合并）后，才接收 v2 正式曲谱 PR；`catalog.json` 保持 `version: 1`。机器人只校验数据、不执行乐谱内容；“由脚本控制”仅为界面文案。自动批准仍只针对仅改数据文件（`catalog.json`、`scores/` 下的曲谱及来源说明）的 PR；`tools/`、`docs/`、`examples/`、工作流等基础设施改动一律人工审核。
+
 `main` 要求 `qinbridge/score-security` 检查、一份批准及适用的 CODEOWNERS 审核；开启旧批准失效、分支保持最新和会话解决要求，禁止强推和删除。维护者保留管理员手动处理权限。
 
 仓库允许 GitHub Actions 批准 PR，默认工作流权限保持只读。仓库的“允许自动合并”开关开放 GitHub 原生功能；当前自动流程通过 API 直接合并，无需再为每个 PR 手动启用原生自动合并。
@@ -151,6 +170,8 @@ PR 有新提交后会重新检查，旧批准失效。主分支更新后，请�
 ```console
 python -I -m unittest discover -s tools/tests -v
 ```
+
+新增 v2/`playbackControl` 用例后，请先同步最新 `main` 再运行，避免用旧校验器误判。
 
 参考：[GitHub workflow_run 文档](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_run) · [GitHub Actions 安全指南](https://docs.github.com/en/actions/reference/security/secure-use)。
 

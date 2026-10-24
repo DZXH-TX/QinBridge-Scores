@@ -194,20 +194,15 @@ def validate_notation(text, notation, timing, ignore_measures):
     require(notes > 0, "Score contains no notes")
 
 
-def validate_score(raw):
-    score = strict_json(raw, SCORE_BYTES)
-    shape(score, ("format", "version", "title", "sourceUrl", "scoreText", "settings"),
-          ("format", "version", "title", "scoreText", "settings"))
-    require(score["format"] == "qinbridge.score" and type(score["version"]) is int and score["version"] == 1, "Unsupported score format/version")
-    text_field(score["title"], 256)
-    source_url(score.get("sourceUrl", ""))
-    settings = score["settings"]
+def resolve_playback_settings(settings, control=None):
+    """Validate both the baseline and the file-owned overlay, without changing either."""
     shape(settings, ("slotMilliseconds", "arpeggioMilliseconds", "gate", "rhythm", "score", "minimumTriggerIntervalMilliseconds"))
     bounded_number(settings.get("slotMilliseconds", 125), 20, 2000)
     bounded_number(settings.get("arpeggioMilliseconds", 18), 1, 100)
     bounded_number(settings.get("gate", .72), .1, .95)
     bounded_number(settings.get("minimumTriggerIntervalMilliseconds", 150), 30, 300)
     rhythm = settings.get("rhythm")
+    bpm, beats, unit, divisions = 60000 / settings.get("slotMilliseconds", 125) / 4, 4, 4, 4
     if rhythm is not None:
         shape(rhythm, ("bpm", "beatsPerBar", "beatUnit", "unitsPerBeat"))
         bpm, beats, unit, divisions = (rhythm.get(k, v) for k, v in (("bpm", 120), ("beatsPerBar", 4), ("beatUnit", 4), ("unitsPerBeat", 4)))
@@ -222,7 +217,46 @@ def validate_score(raw):
     shape(options, ("notation", "timing", "ignoreMeasureNumbers"))
     notation, timing, ignore = options.get("notation", "Auto"), options.get("timing", "SpaceGrid"), options.get("ignoreMeasureNumbers", False)
     require(notation in ("Auto", "Keyboard", "Numbers") and timing in ("SpaceGrid", "SlashBeats") and type(ignore) is bool, "Invalid score reading options")
-    validate_notation(score["scoreText"], notation, timing, ignore)
+    effective = {"bpm": bpm, "beatsPerBar": beats, "beatUnit": unit, "unitsPerBeat": divisions,
+                 "timing": timing, "ignoreMeasureNumbers": ignore,
+                 "arpeggioMilliseconds": settings.get("arpeggioMilliseconds", 18),
+                 "minimumTriggerIntervalMilliseconds": settings.get("minimumTriggerIntervalMilliseconds", 150),
+                 "gate": settings.get("gate", .72)}
+    if control is not None:
+        shape(control, effective)
+        require(bool(control) and all(v is not None for v in control.values()), "File control must contain non-null parameters")
+        for key, low, high in (("bpm", 1, 1000), ("arpeggioMilliseconds", 1, 100),
+                               ("minimumTriggerIntervalMilliseconds", 30, 300), ("gate", .1, .95)):
+            if key in control:
+                bounded_number(control[key], low, high)
+        if "beatsPerBar" in control:
+            require(type(control["beatsPerBar"]) is int and 1 <= control["beatsPerBar"] <= 12, "Invalid controlled beats per bar")
+        if "beatUnit" in control:
+            require(type(control["beatUnit"]) is int and control["beatUnit"] in (2, 4, 8, 16), "Invalid controlled beat unit")
+        if "unitsPerBeat" in control:
+            require(type(control["unitsPerBeat"]) is int and control["unitsPerBeat"] in (1, 2, 3, 4, 6, 8), "Invalid controlled subdivisions")
+        if "timing" in control:
+            require(control["timing"] in ("SpaceGrid", "SlashBeats"), "Invalid controlled timing")
+        if "ignoreMeasureNumbers" in control:
+            require(type(control["ignoreMeasureNumbers"]) is bool, "Invalid controlled measure-number option")
+        effective.update(control)
+    bounded_number(60000 / effective["bpm"] / effective["unitsPerBeat"], 20, 2000)
+    return effective, notation
+
+
+def validate_score(raw):
+    score = strict_json(raw, SCORE_BYTES)
+    shape(score, ("format", "version", "title", "sourceUrl", "scoreText", "settings", "playbackControl"),
+          ("format", "version", "title", "scoreText", "settings"))
+    require(score["format"] == "qinbridge.score" and type(score["version"]) is int and score["version"] in (1, 2), "Unsupported score format/version")
+    if score["version"] == 1:
+        require("playbackControl" not in score, "Version 1 cannot contain playbackControl")
+    else:
+        require(type(score.get("playbackControl")) is dict and bool(score["playbackControl"]), "Version 2 requires nonempty playbackControl")
+    text_field(score["title"], 256)
+    source_url(score.get("sourceUrl", ""))
+    effective, notation = resolve_playback_settings(score["settings"], score.get("playbackControl"))
+    validate_notation(score["scoreText"], notation, effective["timing"], effective["ignoreMeasureNumbers"])
     return score
 
 

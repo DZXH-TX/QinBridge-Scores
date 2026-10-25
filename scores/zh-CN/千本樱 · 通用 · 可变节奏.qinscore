@@ -1,0 +1,111 @@
+{
+  "format": "qinbridge.score",
+  "version": 2,
+  "title": "千本樱 · 通用 · 可变节奏",
+  "sourceUrl": "https://www.bilibili.com/video/BV18Q4y1z7Yv",
+  "scoreText": "(NDH)         (NDH)   /0      (BSG)      /(NDH)         (NDH)   /0      (BSG)      /\n(NDH)         (NDH)   /0      (BSG)      /(NDH)         (ND)   /Q      (ND)      /\n(NDH)         (NDH)   /0      (BSG)      /(NDH)         (NDH)   /0      (BSG)      /\n(NDH)            /(NDQ)            /(BSW)            /(BSE)            /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NH)   G   (DH)   G   /(NQ)      (DJ)  Q  J  /(NH)      (DG)      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NT)      (DQ)      /(NJ)   Q   (DJ)   H   /(NG)      D      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NH)   G   (DH)   G   /(NQ)      (DJ)  Q  J  /(NH)      (DG)      /\n(VH)      (AG)   H   /(VQ)      (AH)   Q   /(BW)      (SW)   E   /(BT)   Q   (SD)   G   /\n(NQ)      (DJ)  Q  J  /(NH)      (DG)      /(NH)      D      /(NH)      (DQ)      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NH)   G   (DH)   G   /(NQ)      (DJ)  Q  J  /(NH)      (DG)      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NT)      (DQ)      /(NJ)   Q   (DJ)   H   /(NG)      D      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NH)   G   (DH)   G   /(NQ)      (DJ)  Q  J  /(NH)      (DG)      /\n(VW)      (AE)   T   /(VY)   T   (AE)   W   /(BH)      (SQ)      /(BW)      (SE)      /\n(NH)      D   H   /N      (DG)      /(NH)      D      /N      D      /\n(NH)      D      /(NH)      D   G   /(NH)      (DQ)      /(NQ)      (DW)      /\n(VH)      A      /(VH)      A   G   /(BH)      (SG)      /(BD)      (SG)      /\n(NH)      D      /(NH)      D   G   /(NH)      (DQ)      /(NW)      (DE)      /\n(VE)      A      /(VW)      (AE)   W   /(BQ)      S      /(BH)      S      /\n(NH)      D      /(NH)      D   G   /(NH)      (DQ)      /(NQ)      (DW)      /\n(VH)      A      /(VH)      A   G   /(BH)      (SG)      /(BD)      (SG)      /\n(NH)      D      /(NH)      D   G   /(NH)      (DQ)      /(NW)      (DE)      /\n(VE)      A      /(VW)      (AE)   W   /(BQ)      S      /(BH)      S      /\n(VQ)      A      /(VJ)      A      /(BH)      S      /(BG)      S      /\n(ZG)      (BG)  H  G  /(ZD)      (BS)      /(ZD)      B      /Z      B      /\n(VD)      (AG)      /(VH)      A      /(BW)      S      /(BJ)      S      /\n(NQ)      D      /(NJ)      (DG)      /(NH)      D      /N      D      /\n(VQ)      A      /(VJ)      A      /(BH)      S      /(BG)      S      /\n(ZG)      (BG)  H  G  /(ZD)      (BS)      /(ZD)      B      /(ZD)      (BG)      /\n(XNH)      (XNH)      /0      (XNH)      /(XNQ)            /(XNW)            /\n(CMJ)         (CMJ)   /0      (CMJ)      /(CMJ)            /H      Q      /\n(VW)      A   W   /V      (AE)      /(BE)      S      /B      (SE)      /\n(ZT)      (BY)      /(ZW)      (BQ)      /(ZE)      B      /(ZH)      (BQ)      /\n(VW)      A   W   /V      (AE)      /(BE)      S      /B      (SE)      /\n(NR)      (DE)      /(NW)      (DQ)      /(NQ)      D      /(NH)      (DQ)      /\n(VW)      A   W   /V      (AE)      /(BE)      S      /B      (SE)      /\n(ZT)      (BY)      /(ZW)      (BQ)      /(ZE)      B      /(ZH)      (BQ)      /\n(VR)      A      /(VE)      A      /(BW)      S      /(BQ)      S      /\n(NW)      (DE)      /(NJ)      (DG)      /(NH)      D      /(NH)      (DQ)      /\n(VW)      A   W   /V      (AE)      /(BE)      S      /B      (SE)      /\n(ZT)      (BY)      /(ZW)      (BQ)      /(ZE)      B      /(ZH)      (BQ)      /\n(VW)      A   W   /V      (AE)      /(BE)      S      /B      (SE)      /\n(NR)      (DE)      /(NW)      (DQ)      /(NQ)      D      /(NH)      (DQ)      /\n(VW)      A   W   /V      (AE)      /(BE)      S      /B      (SE)      /\n(ZT)      (BY)      /(ZW)      (BQ)      /(ZE)      B      /(ZH)      (BQ)      /\n(VR)      A      /(VE)      A      /(BW)      S      /(BQ)      S      /\n(NW)      (DQ)      /(NE)      (DT)      /(NY)      D      /N      D      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NH)   G   (DH)   G   /(NQ)      (DJ)  Q  J  /(NH)      (DG)      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NT)      (DQ)      /(NJ)   Q   (DJ)   H   /(NG)      D      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NH)   G   (DH)   G   /(NQ)      (DJ)  Q  J  /(NH)      (DG)      /\n(VH)      (AG)   H   /(VQ)      (AH)   Q   /(BW)      (SW)   E   /(BT)   Q   (SD)   G   /\n(NQ)      (DJ)  Q  J  /(NH)      (DG)      /(NH)      D      /(NH)      (DQ)      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NH)   G   (DH)   G   /(NQ)      (DJ)  Q  J  /(NH)      (DG)      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NT)      (DQ)      /(NJ)   Q   (DJ)   H   /(NG)      D      /\n(VW)      (AE)      /(VH)   G   (AH)   G   /(BW)      (SE)      /(BH)   G   (SH)   G   /\n(NW)      (DE)      /(NH)   G   (DH)   G   /(NQ)      (DJ)  Q  J  /(NH)      (DG)      /\n(VW)      (AE)   T   /(VY)   T   (AE)   W   /(BH)      (SQ)      /(BW)      (SE)      /\n(NH)      D   H   /N      (DG)      /(NH)      D      /(CD)      D      /\n(NDH)         (NDH)   /0      (BSG)      /(NDH)            /0            /",
+  "settings": {
+    "slotMilliseconds": 125,
+    "arpeggioMilliseconds": 30,
+    "gate": 0.8,
+    "rhythm": {
+      "bpm": 92,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 80
+  },
+  "playbackControl": {
+    "beatsPerBar": 4,
+    "beatUnit": 4,
+    "unitsPerBeat": 4,
+    "timing": "SlashBeats",
+    "arpeggioMilliseconds": 30,
+    "minimumTriggerIntervalMilliseconds": 80,
+    "gate": 0.8,
+    "ignoreMeasureNumbers": false,
+    "tempoMap": [
+      {
+        "atBar": 1,
+        "bpm": 88,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 4,
+        "bpm": 88,
+        "curveToNext": "linearBpm"
+      },
+      {
+        "atBar": 5,
+        "bpm": 92,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 19,
+        "bpm": 92,
+        "curveToNext": "linearBpm"
+      },
+      {
+        "atBar": 21,
+        "bpm": 86,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 27,
+        "bpm": 86,
+        "curveToNext": "linearBpm"
+      },
+      {
+        "atBar": 29,
+        "bpm": 90,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 35,
+        "bpm": 90,
+        "curveToNext": "linearBpm"
+      },
+      {
+        "atBar": 37,
+        "bpm": 96,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 51,
+        "bpm": 96,
+        "curveToNext": "linearBpm"
+      },
+      {
+        "atBar": 53,
+        "bpm": 92,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 65,
+        "bpm": 92,
+        "curveToNext": "linearBpm"
+      },
+      {
+        "atBar": 67,
+        "bpm": 86,
+        "curveToNext": "linearBpm"
+      },
+      {
+        "atBar": 69,
+        "bpm": 72,
+        "curveToNext": "linearBpm"
+      },
+      {
+        "atBar": 70,
+        "bpm": 60,
+        "curveToNext": "hold"
+      }
+    ]
+  }
+}

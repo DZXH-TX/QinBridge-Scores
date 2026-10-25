@@ -93,9 +93,15 @@
       "language": "zh-CN"
     },
     {
-      "id": "scores/zh-CN/千本樱 · 通用.qinscore",
-      "title": "千本樱 · 通用",
-      "file": "scores/zh-CN/千本樱 · 通用.qinscore",
+      "id": "scores/zh-CN/千本樱 · 通用 · 可变节奏.qinscore",
+      "title": "千本樱 · 通用 · 可变节奏",
+      "file": "scores/zh-CN/千本樱 · 通用 · 可变节奏.qinscore",
+      "language": "zh-CN"
+    },
+    {
+      "id": "scores/zh-CN/千本樱 · 通用 · 固定节奏.qinscore",
+      "title": "千本樱 · 通用 · 固定节奏",
+      "file": "scores/zh-CN/千本樱 · 通用 · 固定节奏.qinscore",
       "language": "zh-CN"
     },
     {

@@ -14,7 +14,9 @@ import test_score_security
 
 class PlaybackControlTests(unittest.TestCase):
     def test_shared_client_protocol_cases(self):
-        cases = json.loads((Path(__file__).parent / "fixtures/playback-control-cases.json").read_text(encoding="utf-8"))
+        cases = []
+        for name in ("playback-control-cases.json", "tempo-map-cases.json"):
+            cases.extend(json.loads((Path(__file__).parent / "fixtures" / name).read_text(encoding="utf-8")))
         for case in cases:
             with self.subTest(name=case["name"]):
                 raw = case["json"].encode("utf-8")

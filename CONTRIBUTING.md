@@ -6,7 +6,7 @@
 
 ## 1. 准备一份可用的乐谱
 
-在琴桥中编辑曲目并试听，保存谱面与节奏设置，然后在「曲谱文件」页面导出 `.qinscore`。如果使用了文件控制播放参数，导出文件会是 `version: 2` 并包含 `playbackControl`；该功能计划随琴桥 0.10.0 提供，当前仍在开发、尚未发布。
+在琴桥中编辑曲目并试听，保存谱面与节奏设置，然后在「曲谱文件」页面导出 `.qinscore`。文件控制使用 `version: 2` 和 `playbackControl`；固定控制需琴桥 0.10.0 起，按小节变速 `tempoMap` 需 0.11.0 起。当前为本地测试包，不代表商店已发布。
 
 文件需要保留标题、谱面和演奏设置；使用文件控制时，还要保留顶层 `playbackControl` 和有效的 `settings` 基线。如果手工编写，可以参考[数字谱示例](examples/numbers.qinscore)、[键盘谱示例](examples/keyboard.qinscore)、[文件控制示例](examples/file-controlled.qinscore)和[字段说明](docs/SCORE-FORMAT.md)。
 
@@ -27,6 +27,8 @@
 - `settings` 仍是必须有效的基线；合并后的每格时长 `60000 / bpm / unitsPerBeat` 必须在 20–2000 毫秒内。
 
 完整示例见[文件控制示例](examples/file-controlled.qinscore)。不要为了让旧版校验器通过而降级为 v1 或删除控制字段。
+
+按小节变速仍使用 v2：在 `playbackControl.tempoMap` 中按顺序填写 `atBar`、`bpm` 和可选 `curveToNext`。首点为第 1 小节，`hold` 保持速度，`linearBpm` 渐变到下一点；最后一点保持。不能同时填写 `playbackControl.bpm`，不能超过谱面结尾。参见[变速示例](examples/tempo-map.qinscore)与[格式说明](docs/SCORE-FORMAT.md#playback-control)。先在支持的客户端试听，再提交正式曲谱。
 
 ## 2. Fork 仓库并创建分支
 

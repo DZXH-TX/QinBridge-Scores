@@ -141,19 +141,28 @@ def validate_notation(text, notation, timing, ignore_measures):
         lines.append(line)
     if notation == "Auto":
         notation = "Keyboard" if any(re.search("[A-Za-z]", line) for line in lines) else "Numbers"
-    notes = work = 0
+    notes = work = slots = 0
     for line in lines:
+        if timing == "SlashBeats":
+            segments = line.split("/")
+            slots += len(segments) - int(len(segments) > 1 and not segments[-1].strip())
         stack = []
         i = 0
         while i < len(line):
             char = line[i]
             i += 1
             if char == " ":
+                if timing == "SpaceGrid" and not stack:
+                    slots += 1
                 continue
             if char in "/|" or char == "0" or (char == "-" and notation == "Keyboard"):
                 require(not stack, "Rest or separator inside a note group")
+                if timing == "SpaceGrid" and char not in "/|":
+                    slots += 1
                 continue
             if char in "([":
+                if timing == "SpaceGrid" and not stack:
+                    slots += 1
                 require(len(stack) < 32, "Note group nesting exceeds 32")
                 stack.append((char, []))
                 continue
@@ -187,11 +196,28 @@ def validate_notation(text, notation, timing, ignore_measures):
                 require(char in "1234567", "Invalid numeric note")
                 note = octave * 7 + int(char) - 1
             notes += 1
+            if timing == "SpaceGrid" and not stack:
+                slots += 1
             require(notes <= 100_000, "Score exceeds 100000 notes")
             if stack:
                 stack[-1][1].append([1 << note])
         require(not stack, "Unclosed note group")
     require(notes > 0, "Score contains no notes")
+    return slots
+
+
+def validate_tempo_map(points):
+    require(type(points) is list and bool(points), "tempoMap must be a nonempty array")
+    previous = 0
+    for point in points:
+        shape(point, ("atBar", "bpm", "curveToNext"), ("atBar", "bpm"))
+        bar = point["atBar"]
+        require(type(bar) is int and previous < bar <= 2147483647, "Tempo bars must be increasing positive integers")
+        require(previous != 0 or bar == 1, "tempoMap must start at bar 1")
+        bounded_number(point["bpm"], 1, 1000)
+        require(point.get("curveToNext", "hold") in ("hold", "linearBpm"), "Invalid tempo curve")
+        previous = bar
+    require(points[-1].get("curveToNext", "hold") == "hold", "Last tempo point must hold")
 
 
 def resolve_playback_settings(settings, control=None):
@@ -223,7 +249,7 @@ def resolve_playback_settings(settings, control=None):
                  "minimumTriggerIntervalMilliseconds": settings.get("minimumTriggerIntervalMilliseconds", 150),
                  "gate": settings.get("gate", .72)}
     if control is not None:
-        shape(control, effective)
+        shape(control, (*effective, "tempoMap"))
         require(bool(control) and all(v is not None for v in control.values()), "File control must contain non-null parameters")
         for key, low, high in (("bpm", 1, 1000), ("arpeggioMilliseconds", 1, 100),
                                ("minimumTriggerIntervalMilliseconds", 30, 300), ("gate", .1, .95)):
@@ -239,7 +265,14 @@ def resolve_playback_settings(settings, control=None):
             require(control["timing"] in ("SpaceGrid", "SlashBeats"), "Invalid controlled timing")
         if "ignoreMeasureNumbers" in control:
             require(type(control["ignoreMeasureNumbers"]) is bool, "Invalid controlled measure-number option")
+        if "tempoMap" in control:
+            require("bpm" not in control, "bpm and tempoMap are mutually exclusive")
+            validate_tempo_map(control["tempoMap"])
         effective.update(control)
+        if "tempoMap" in control:
+            effective["bpm"] = control["tempoMap"][0]["bpm"]
+            for point in control["tempoMap"]:
+                bounded_number(60000 / point["bpm"] / effective["unitsPerBeat"], 20, 2000)
     bounded_number(60000 / effective["bpm"] / effective["unitsPerBeat"], 20, 2000)
     return effective, notation
 
@@ -256,7 +289,11 @@ def validate_score(raw):
     text_field(score["title"], 256)
     source_url(score.get("sourceUrl", ""))
     effective, notation = resolve_playback_settings(score["settings"], score.get("playbackControl"))
-    validate_notation(score["scoreText"], notation, effective["timing"], effective["ignoreMeasureNumbers"])
+    slots = validate_notation(score["scoreText"], notation, effective["timing"], effective["ignoreMeasureNumbers"])
+    if "tempoMap" in effective:
+        total_beats = slots if effective["timing"] == "SlashBeats" else slots / effective["unitsPerBeat"]
+        last_beat = (effective["tempoMap"][-1]["atBar"] - 1) * effective["beatsPerBar"]
+        require(last_beat <= total_beats + 1e-9, "Tempo point extends beyond the score")
     return score
 
 

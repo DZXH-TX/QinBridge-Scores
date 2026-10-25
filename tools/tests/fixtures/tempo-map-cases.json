@@ -1,0 +1,419 @@
+[
+  {
+    "name": "tempo-linear-slow",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false,
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "tempoMap": [
+        {
+          "atBar": 1,
+          "bpm": 120,
+          "curveToNext": "linearBpm"
+        },
+        {
+          "atBar": 2,
+          "bpm": 80
+        }
+      ]
+    }
+  },
+  {
+    "name": "tempo-linear-fast",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":80,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":120}]}}",
+    "effective": {
+      "bpm": 80,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false,
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "tempoMap": [
+        {
+          "atBar": 1,
+          "bpm": 80,
+          "curveToNext": "linearBpm"
+        },
+        {
+          "atBar": 2,
+          "bpm": 120
+        }
+      ]
+    }
+  },
+  {
+    "name": "tempo-step",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120},{\"atBar\":2,\"bpm\":80}]}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false,
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "tempoMap": [
+        {
+          "atBar": 1,
+          "bpm": 120
+        },
+        {
+          "atBar": 2,
+          "bpm": 80
+        }
+      ]
+    }
+  },
+  {
+    "name": "tempo-one-point",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":96}]}}",
+    "effective": {
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false,
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "tempoMap": [
+        {
+          "atBar": 1,
+          "bpm": 96
+        }
+      ]
+    }
+  },
+  {
+    "name": "tempo-terminal-boundary",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":3,\"bpm\":60}]}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false,
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "tempoMap": [
+        {
+          "atBar": 1,
+          "bpm": 120,
+          "curveToNext": "linearBpm"
+        },
+        {
+          "atBar": 3,
+          "bpm": 60
+        }
+      ]
+    }
+  },
+  {
+    "name": "tempo-compound-meter",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/G/H/\\nJ/Q/W/E/R/T/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}],\"beatsPerBar\":6,\"beatUnit\":8}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 6,
+      "beatUnit": 8,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false,
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "tempoMap": [
+        {
+          "atBar": 1,
+          "bpm": 120,
+          "curveToNext": "linearBpm"
+        },
+        {
+          "atBar": 2,
+          "bpm": 80
+        }
+      ]
+    }
+  },
+  {
+    "name": "tempo-space-grid",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A000S000D000F000G000\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}],\"timing\":\"SpaceGrid\"}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SpaceGrid",
+      "ignoreMeasureNumbers": false,
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "tempoMap": [
+        {
+          "atBar": 1,
+          "bpm": 120,
+          "curveToNext": "linearBpm"
+        },
+        {
+          "atBar": 2,
+          "bpm": 80
+        }
+      ]
+    }
+  },
+  {
+    "name": "tempo-metadata-skipped",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"BPM:120 4/4\\nA/S/D/F/\\n\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false,
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "tempoMap": [
+        {
+          "atBar": 1,
+          "bpm": 120,
+          "curveToNext": "linearBpm"
+        },
+        {
+          "atBar": 2,
+          "bpm": 80
+        }
+      ]
+    }
+  },
+  {
+    "name": "tempo-partial-last-bar",
+    "valid": true,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]}}",
+    "effective": {
+      "bpm": 120,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4,
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false,
+      "arpeggioMilliseconds": 18,
+      "minimumTriggerIntervalMilliseconds": 150,
+      "gate": 0.72,
+      "tempoMap": [
+        {
+          "atBar": 1,
+          "bpm": 120,
+          "curveToNext": "linearBpm"
+        },
+        {
+          "atBar": 2,
+          "bpm": 80
+        }
+      ]
+    }
+  },
+  {
+    "name": "tempo-null",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":null}}"
+  },
+  {
+    "name": "tempo-empty",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[]}}"
+  },
+  {
+    "name": "tempo-object",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":{\"atBar\":1,\"bpm\":90}}}"
+  },
+  {
+    "name": "tempo-null-point",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[null]}}"
+  },
+  {
+    "name": "tempo-first-not-one",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":2,\"bpm\":90}]}}"
+  },
+  {
+    "name": "tempo-zero-bar",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":0,\"bpm\":90}]}}"
+  },
+  {
+    "name": "tempo-negative-bar",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":-1,\"bpm\":90}]}}"
+  },
+  {
+    "name": "tempo-duplicate-bar",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":90},{\"atBar\":1,\"bpm\":80}]}}"
+  },
+  {
+    "name": "tempo-unordered-bars",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":90},{\"atBar\":3,\"bpm\":80},{\"atBar\":2,\"bpm\":100}]}}"
+  },
+  {
+    "name": "tempo-beyond-score",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":90},{\"atBar\":4,\"bpm\":80}]}}"
+  },
+  {
+    "name": "tempo-partial-beyond-score",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]}}"
+  },
+  {
+    "name": "tempo-no-atBar",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"bpm\":90}]}}"
+  },
+  {
+    "name": "tempo-no-bpm",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1}]}}"
+  },
+  {
+    "name": "tempo-bar-string",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":\"1\",\"bpm\":90}]}}"
+  },
+  {
+    "name": "tempo-bar-bool",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":true,\"bpm\":90}]}}"
+  },
+  {
+    "name": "tempo-bar-float",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1.5,\"bpm\":90}]}}"
+  },
+  {
+    "name": "tempo-bar-huge",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":2147483648,\"bpm\":90}]}}"
+  },
+  {
+    "name": "tempo-bpm-string",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":\"90\"}]}}"
+  },
+  {
+    "name": "tempo-bpm-bool",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":true}]}}"
+  },
+  {
+    "name": "tempo-bpm-null",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":null}]}}"
+  },
+  {
+    "name": "tempo-bpm-low",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":0}]}}"
+  },
+  {
+    "name": "tempo-bpm-high",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":1001}]}}"
+  },
+  {
+    "name": "tempo-curve-null",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":90,\"curveToNext\":null}]}}"
+  },
+  {
+    "name": "tempo-curve-case",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":90,\"curveToNext\":\"Hold\"}]}}"
+  },
+  {
+    "name": "tempo-curve-code",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":90,\"curveToNext\":\"return 90\"}]}}"
+  },
+  {
+    "name": "tempo-curve-number",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":90,\"curveToNext\":1}]}}"
+  },
+  {
+    "name": "tempo-curve-last-ramp",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":90,\"curveToNext\":\"linearBpm\"}]}}"
+  },
+  {
+    "name": "tempo-unknown-point-field",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":90,\"script\":\"120\"}]}}"
+  },
+  {
+    "name": "tempo-bpm-conflict",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}],\"bpm\":120}}"
+  },
+  {
+    "name": "tempo-v1",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":1,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]}}"
+  },
+  {
+    "name": "tempo-map-in-settings",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"},\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]}}"
+  },
+  {
+    "name": "tempo-map-at-root",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]},\"tempoMap\":[{\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]}"
+  },
+  {
+    "name": "tempo-grid-too-short-at-end",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120},{\"atBar\":2,\"bpm\":1000}]}}"
+  },
+  {
+    "name": "tempo-grid-too-long-at-end",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":120},{\"atBar\":2,\"bpm\":1}]}}"
+  },
+  {
+    "name": "tempo-duplicate-key",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"atBar\":1,\"bpm\":120,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]}}"
+  },
+  {
+    "name": "tempo-nonfinite",
+    "valid": false,
+    "json": "{\"format\":\"qinbridge.score\",\"version\":2,\"title\":\"Tempo example\",\"sourceUrl\":\"\",\"scoreText\":\"A/S/D/F/\\nG/H/J/Q/\",\"settings\":{\"score\":{\"notation\":\"Keyboard\",\"timing\":\"SlashBeats\"}},\"playbackControl\":{\"tempoMap\":[{\"atBar\":1,\"bpm\":1e999,\"curveToNext\":\"linearBpm\"},{\"atBar\":2,\"bpm\":80}]}}"
+  }
+]

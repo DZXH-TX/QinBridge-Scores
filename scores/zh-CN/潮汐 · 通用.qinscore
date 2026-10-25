@@ -1,0 +1,161 @@
+{
+  "format": "qinbridge.score",
+  "version": 2,
+  "title": "潮汐 · 通用",
+  "sourceUrl": "https://www.bilibili.com/video/BV1Hf4y1T7Dx/",
+  "scoreText": "(VE)/0(VE)/0/(VE)/\n0/(VQ)/(VW)/(VT)/\n(BW)/0(BW)/0/(BW)/\n0/(BQ)/(BW)/(BT)/\n(NQ)/0(NQ)/0/(NQ)/\n0/(NQ)/(NW)/(NE)/\n(NQ)/0(NQ)/0/(NQ)/\n0/(NQ)/(NJ)/(NQ)/\n(VE)/0(VE)/0/(VE)/\n0/(VQ)/(VW)/(VT)/\n(BW)/0(BW)/0/(BW)/\n0/(BQ)/(BW)/(BT)/\n(NQ)/0(NQ)/0/(NQ)/\n0/(NQ)/(NW)/(NE)/\n(NQ)/0(NQ)/0/(NQ)/\n0/(NQ)/(NJ)/(NQ)/\nV/(ZE)W/(VE)/(NE)W/\nE/(ZE)W/(NE)/(VT)/\nB/(XW)Q/(BW)/(NW)Q/\nW/(XW)Q/(ME)/(BW)/\nN/(CQ)H/(NQ)/(AQ)H/\nQ/(CQ)H/(NQ)/(AQ)Q/\nQ/(CH)/(AT)/(CE)/\nV/(ZE)W/(VE)/(NE)W/\nE/(ZE)W/(NE)/(VT)/\nB/(XW)Q/(BW)/(NW)W/\nW/(XW)Q/(ME)/(BW)/\nN/(CH)/(NQ)/(AH)/\n(HW)/(CE)/A/(NHW)/\nN/(CDE)/N/(AE)/\n(EU)/(DU)/(AQT)/(CE)/\nV/Z/V/(NE)/\n(AEU)/(ZU)/(NQT)/(VW)/\nB/X/B/(NE)/\n(MEU)/(XU)/(SQT)/(BQ)/\nN/C/N/(AGQ)/\nD/(CHW)/(AHE)/(NHY)/\nN/C/N/(AE)/\n(DQU)/(CJU)/(AGT)/(CDE)/\nV/Z/V/(NE)/\n(ZQU)/(ZJU)/(NGT)/(VSW)/\nB/X/B/(NGQ)/\n(MHW)/(XQ)/(SE)/(BQ)/\nN/C/N/(AGQ)/\nD/(CHW)/(AHE)/(NHY)/\nN/C/N/(AE)/\nD/(CT)/(AE)/C/\n(VH)/Z/V/(NE)/\nA/(ZT)/(NE)/V/\n(BG)/X/B/(NE)/\nM/(XT)/(SE)/B/\n(NH)/C/N/A/\nD/C/A/N/\nN/C/N/(AE)/\nD/(CT)/(AE)/C/\n(VH)/Z/V/(NE)/\nA/(ZT)/(NE)/V/\n(BG)/X/B/(NG)/\nM/(XD)/(SQ)/B/\nNH/C/N/A/\nD/(CQ)/(AW)/(NE)/\n(NQ)/CQ/N/(AQ)/\n(DW)/(CQ)/(NJT)/(CQ)/\nV/(ZE)W/(VE)/(NE)W/\nE/(ZE)W/(NE)/(VT)/\nB/(XW)Q/(BW)/(NW)Q/\nW/(XW)Q/(ME)/(BW)/\nN/(CQ)H/(NQ)/(AQ)H/\nQ/(CQ)H/(NQ)/(AQ)Q/\nQ/(CH)/(AT)/(CE)/\nV/(ZE)W/(VE)/(NE)W/\nE/(ZE)W/(NE)/(VT)/\nB/(XW)Q/(BW)/(NW)W/\nW/(XW)Q/(ME)/(BW)/\nN/(CH)/(NQ)/(AH)/\n(HW)/(CE)/A/(NHW)/\nN/(CDE)/N/(AE)/\n(EU)/(DU)/(AQT)/(CE)/\nV/Z/V/(NE)/\n(AEU)/(ZU)/(NQT)/(VW)/\nB/X/B/(NE)/\n(MEU)/(XU)/(SQT)/(BQ)/\nN/C/N/(AGQ)/\nD/(CHW)/(AHE)/(NHY)/\nN/C/N/(AE)/\n(DQU)/(CJU)/(AGT)/(CDE)/\nV/Z/V/(NE)/\n(ZQU)/(ZJU)/(NGT)/(VSW)/\nB/X/B/(NGQ)/\n(MHW)/(XQ)/(SE)/(BQ)/\nN/C/N/(AGQ)/\nD/(CHW)/(AHE)/(NHY)/\nN/C/N/(AE)/\nD/(CT)/(AE)/C/\n(VH)/Z/V/(NE)/\nA/(ZT)/(NE)/V/\n(BG)/X/B/(NE)/\nM/(XT)/(SE)/B/\n(NH)/C/N/A/\nD/C/A/N/\nN/C/N/(AE)/\nD/(CT)/(AE)/C/\n(VH)/Z/V/(NE)/\nA/(ZT)/(NE)/V/\n(BG)/X/B/(NG)/\nM/(XD)/(SQ)/B/\nNH/C/N/A/\nD/(CQ)/(AW)/(NE)/\n(NQ)/CQ/N/(ADE)/\nD/(CGT)/(ADE)/C/\n(VNH)/Z/V/(NDE)/\nA/(ZGT)/(NDE)/V/\n(BG)/X/B/(NDE)/\nM/(XGT)/(SDE)/B/\n(NH)/C/N/A/\nD/C/A/N/\nN/C/N/(ADE)/\nD/(CGT)/(ADE)/C/\n(VNH)/Z/V/(NDE)/\nA/(ZGT)/(NDE)/V/\n(BG)/X/B/(NG)/\nM/(XD)/(SQ)/B/\nN/(CNH)/N/A/\nD/(CQ)/(AW)/(NE)/\n(NQ)/CQ/N/(AQ)/\n(DW)/(CQ)/(NJT)/(CQ)/",
+  "settings": {
+    "slotMilliseconds": 120.8313194780087,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.88,
+    "rhythm": {
+      "bpm": 124.14,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 150
+  },
+  "playbackControl": {
+    "tempoMap": [
+      {
+        "atBar": 1,
+        "bpm": 124.14,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 5,
+        "bpm": 130.32,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 9,
+        "bpm": 132.11,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 13,
+        "bpm": 137.14,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 17,
+        "bpm": 145.45,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 21,
+        "bpm": 136.71,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 24,
+        "bpm": 138.46,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 28,
+        "bpm": 134.27,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 36,
+        "bpm": 132.72,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 44,
+        "bpm": 131.21,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 52,
+        "bpm": 130.32,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 60,
+        "bpm": 124.14,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 61,
+        "bpm": 107.46,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 62,
+        "bpm": 126.32,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 63,
+        "bpm": 105.88,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 64,
+        "bpm": 130.48,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 75,
+        "bpm": 131.81,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 83,
+        "bpm": 130.32,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 91,
+        "bpm": 130.61,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 99,
+        "bpm": 131.21,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 107,
+        "bpm": 131.51,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 111,
+        "bpm": 127.15,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 119,
+        "bpm": 128.57,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 125,
+        "bpm": 128.57,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 126,
+        "bpm": 112.5,
+        "curveToNext": "hold"
+      }
+    ],
+    "beatsPerBar": 4,
+    "beatUnit": 4,
+    "unitsPerBeat": 4,
+    "timing": "SlashBeats",
+    "arpeggioMilliseconds": 18,
+    "minimumTriggerIntervalMilliseconds": 150,
+    "gate": 0.88,
+    "ignoreMeasureNumbers": false
+  }
+}

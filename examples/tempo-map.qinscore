@@ -1,0 +1,21 @@
+{
+  "format": "qinbridge.score",
+  "version": 2,
+  "title": "小节变速示例",
+  "sourceUrl": "",
+  "scoreText": "A/S/D/F/\nG/H/J/Q/\nQ/J/H/G/\nF/D/S/A/",
+  "settings": {
+    "rhythm": { "bpm": 120, "beatsPerBar": 4, "beatUnit": 4, "unitsPerBeat": 4 },
+    "score": { "notation": "Keyboard", "timing": "SlashBeats" }
+  },
+  "playbackControl": {
+    "beatsPerBar": 4,
+    "timing": "SlashBeats",
+    "tempoMap": [
+      { "atBar": 1, "bpm": 100, "curveToNext": "hold" },
+      { "atBar": 2, "bpm": 100, "curveToNext": "linearBpm" },
+      { "atBar": 3, "bpm": 80, "curveToNext": "linearBpm" },
+      { "atBar": 4, "bpm": 100, "curveToNext": "hold" }
+    ]
+  }
+}

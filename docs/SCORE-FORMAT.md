@@ -114,7 +114,7 @@ JSON 字符串中的 `\n` 表示换行。字段名区分大小写；数值不加
 - `version: 1` 的普通文件仍然可以读取；v1 中出现 `playbackControl`（包括 `null`）一律无效。
 - 带 `playbackControl` 的文件必须是 `version: 2`；v2 缺失 `playbackControl`、值为 `null` 或空对象 `{}` 都无效。
 - 无文件控制的导出保持 `version: 1`；含文件控制的导出为 `version: 2`。新版客户端在导入、曲库保存和导出时完整保留控制内容；旧版客户端会因版本 2 明确拒绝该文件，不能偷偷降级为 v1 或移除控制字段。
-- `playbackControl` 随计划中的琴桥 0.10.0 提供（当前仍在开发，尚未发布）。
+- 固定参数控制需要琴桥 0.10.0 起；小节变速 `tempoMap` 需要 0.11.0 起。两种都使用 `version: 2`。旧版客户端会明确拒绝不认识的字段，不能为兼容旧版而删掉变速表。当前为本地测试包，不代表已发布到商店。
 
 ### 字段
 
@@ -123,6 +123,7 @@ JSON 字符串中的 `\n` 表示换行。字段名区分大小写；数值不加
 | 字段 | 类型 | 范围 / 可选值 |
 | --- | --- | --- |
 | `playbackControl.bpm` | 数值（double） | 1–1000 |
+| `playbackControl.tempoMap` | 非空数组 | 小节变速点；与同一控制对象中的 `bpm` 互斥 |
 | `playbackControl.beatsPerBar` | 整数 | 1–12 |
 | `playbackControl.beatUnit` | 整数 | `2`、`4`、`8`、`16` |
 | `playbackControl.unitsPerBeat` | 整数 | `1`、`2`、`3`、`4`、`6`、`8` |
@@ -134,7 +135,7 @@ JSON 字符串中的 `\n` 表示换行。字段名区分大小写；数值不加
 
 “数值”表示 JSON 数字，可以是整数或小数，但不能加引号，也不能写成 `true`/`false`；“整数”字段不接受小数。全部数值必须有限。
 
-`settings` 本身必须始终有效，作为未接管字段和可编辑设置的基线。若接管了 `bpm`，使用控制值，否则使用有效基线的 BPM：`rhythm` 为对象时，省略的 `bpm` 默认为 120；整个 `rhythm` 省略或为 `null` 时，按 `60000 / slotMilliseconds / 4` 推导 BPM，每拍分格默认为 4。每个控制字段逐项覆盖，合并后的每格时长 `60000 / bpm / unitsPerBeat` 仍必须落在 **20–2000 毫秒**之间。例如 `bpm: 90`、`unitsPerBeat: 4` 对应每格约 166.67 毫秒。
+`settings` 本身必须始终有效，作为未接管字段和可编辑设置的基线。若接管了 `bpm`，使用控制值；有 `tempoMap` 时，初始 BPM 取首点。两者都没有时使用有效基线的 BPM：`rhythm` 为对象时，省略的 `bpm` 默认为 120；整个 `rhythm` 省略或为 `null` 时，按 `60000 / slotMilliseconds / 4` 推导 BPM，每拍分格默认为 4。每个控制字段逐项覆盖，合并后的每格时长 `60000 / bpm / unitsPerBeat` 仍必须落在 **20–2000 毫秒**之间；变速表每个端点同样检查。例如 `bpm: 90`、`unitsPerBeat: 4` 对应每格约 166.67 毫秒。
 
 完整示例见 [`examples/file-controlled.qinscore`](../examples/file-controlled.qinscore)（自编短音阶，只接管部分字段）：
 
@@ -150,6 +151,30 @@ JSON 字符串中的 `\n` 表示换行。字段名区分大小写；数值不加
 ```
 
 未携带 `playbackControl` 的普通文件保持 `version: 1`，行为不变。`catalog.json` 仍为 `version: 1`，目录条目只包含 `id`、`title`、`file`、`language`，不携带 `playbackControl`；客户端从乐谱文件本身读取控制内容。
+
+### 按小节变速 tempoMap（仍为 v2）
+
+完整四小节示例见 [`examples/tempo-map.qinscore`](../examples/tempo-map.qinscore)。变速表位于 `playbackControl.tempoMap`，每个点只允许 `atBar`、`bpm`、`curveToNext`：
+
+```json
+"tempoMap": [
+  { "atBar": 1, "bpm": 100, "curveToNext": "hold" },
+  { "atBar": 2, "bpm": 100, "curveToNext": "linearBpm" },
+  { "atBar": 3, "bpm": 80, "curveToNext": "linearBpm" },
+  { "atBar": 4, "bpm": 100, "curveToNext": "hold" }
+]
+```
+
+- `atBar` 必填，范围 1–2147483647 的整数，首点必须为 1，后续严格递增。按累计拍数与有效 `beatsPerBar` 定位，不按换行、空行或手写编号定位。在 4/4 中第 2 小节是累计 4 拍处；`SlashBeats` 每段计一拍，`SpaceGrid` 每格计 `1 / unitsPerBeat` 拍。
+- `bpm` 必填，范围 1–1000；BPM 仍按拍号分母计拍，例如 6/8 数八分音符。各端点必须满足有效格长限制。
+- `curveToNext` 省略时为 `hold`：维持本点速度，到下一点直接切换。`linearBpm`：从本点到下一点，BPM 随拍位线性改变；目标更低即渐慢，更高即渐快。值区分大小写，最后一点必须为 `hold`。
+- 变速点不得超出谱面总拍数。完整结尾可使用下一小节起点作为渐变终点，例如 69 小节谱的第 70 小节起点；终点不添加时长。部分小节结尾不能引用其后的边界。
+- `tempoMap` 和同一 `playbackControl.bpm` 互斥。`settings` 仍保留合法基线。变速表接管 BPM，界面显示“由脚本控制”；其他参数是否锁定取决于各自是否被接管。
+- 空数组、空点、重复小节、乱序、未知字段、`null`、表达式、缺失必填值均无效。每个点同样禁止重复 JSON 键、数值字符串及非有限数。
+
+客户端对 `60000 / BPM(拍位)` 做积分得到毫秒时间，不以端点平均 BPM 近似。起音、休止、按键时长、预览和小节进度使用同一换算，暂停续播不会从曲首重启变速。触发下限、琶音间隔、鼠标提前量依然是实际毫秒，不随 BPM 缩放。播放期间修改文件不会改动已编译时间轴。
+
+格式仍是 v2 的声明式脚本控制，无 Lua/JS、循环或外部执行。0.10.0 会因未知字段拒绝此扩展；应使用 0.11.0 起的客户端，并先更新仓库校验器再提交正式变速谱。
 
 <a id="limits"></a>
 

@@ -1,0 +1,24 @@
+{
+  "format": "qinbridge.score",
+  "version": 1,
+  "title": "白月光和朱砂痣 · 通用",
+  "sourceUrl": "",
+  "scoreText": "(NQ)D/(HJ)Q/(VT)(AY)/(FY)/\n(BT)(SW)/(GW)R/(ZE)B/A/\n(NQ)D/(HJ)Q/(VE)(AR)/(FR)T/\n(BW)S/GQ/(ZQ)B/A/\n(NQ)D/(HJ)Q/(VT)(AY)/(FY)/\n(BT)(SW)/(GW)R/(ZE)B/(MW)E/\n(NQ)C/(AJ)Q/(VE)(AR)/(FT)/\n(BW)X/MQ/(ZQ)B/A/\n(NE)C/(NE)/(VW)  (ZQ)Q/N/\n(BW)X/(MW)E/(ZR)B/(AE)/\nNC/(NW)E/(VW)  (ZQ)Q/VG/\n(BW)(XE)/(BW)Q/(ZQ)B/A/\n(NE)C/(NW)E/(VW)(ZQ)/(VQ)H/\n(BW)(XW)/(BW)E/(ZR)B/(AE)/\n(NT)(CQ)/(NQ)E/(VW)    QZQV/(ZG)G(BW)  /\n(XE)/(BW)Q/(ZQ)B/A/\n(NE)C/(NE)   E/(VW)  (ZQ)Q/VG/\n(BW)(XW)/(BW)E/(ZR)B/(AE)/\n(NE)(CE)/(NE)E/(VW)    QZQV/GG(BW)  /\n(XE)/(BW)  QQ/ZB/A/\n(NE)C/(NE)   E/(VW)  (ZQ)Q/V    GG(BW)  /\n(XW)/(BW)E/(ZR)B/(AE)/\n(NT)(CQ)/(NQ)E/(VW)    QZQV/GG(BW)  /\n(XW)/E(BW)QQ/(ZQ)B/A/\n(NQ)C/(AJ)Q/(VT)(ZY)/(NY)     Y(BT)  /\n(XW)/(ME)R/(ZR)B/(ME)B/\n(NQ)C/(AJ)Q/(VE)(ZR)/(NR)     H(XQ)  /\n(NQ)/(SW)Q/(BJ)X/M/\n(NQ)C/(AJ)Q/(VT)(ZY)/(NY)     T(BT)  /\n(XW)/(ME)R/(ZR)B/(ME)B/\n(NQ)C/(AJ)Q/(VQ)(ZE)/(NW)     G(BW)  /\nXM/Q(ZQ)/BA/HJ(NDQ)  /\nJG/(VAD)/GQ/W/\n(BS)D/F(ZAD)/0/0    HJ(NDQ)  /\nJG/(VAD)/GA/S/\n(BS)D/S(ZBA)/0/(MG)    HJ(NDQ)  /\nJG/(VAD)/GA/S/\n(BS)D/F(ZBD)/0/(MG)    HJ(NDQ)  /\nJG/(VAD)/GA/S/\n(BS)D/S(ZBA)/0/0/\n(NE)C/(NE)   E/(VW)  (ZQ)Q/VG/\n(BW)(XW)/(BW)E/(ZR)B/(AE)/\n(NE)(CE)/(NE)E/(VW)    QZQV/GG(BW)  /\n(XE)/(BW)  QQ/ZB/A/\n(NE)C/(NE)   E/(VW)  (ZQ)Q/V    GG(BW)  /\n(XW)/(BW)E/(ZR)B/(AE)/\n(NT)(CQ)/(NQ)E/(VW)    QZQV/GG(BW)  /\n(XW)/E(BW)QQ/(ZQ)B/A/\n(NQ)C/(AJ)Q/(VT)(ZY)/(NY)     Y(BT)  /\n(XW)/(ME)R/(ZR)B/(ME)B/\n(NQ)C/(AJ)Q/(VE)(ZR)/(NR)     H(XQ)  /\n(NQ)/(SW)Q/(BJ)X/M/\n(NQ)C/(AJ)Q/(VT)(ZY)/(NY)     T(BT)  /\n(XW)/(ME)R/(ZR)B/(ME)B/\n(NQ)C/(AJ)Q/(VQ)(ZE)/(NW)     G(BW)  /\nX/MQ/(ZQ)B/A/\n(NQ)C/(AJ)Q/(VT)(ZY)/(NY)     Y(BT)  /\n(XW)/(ME)R/(ZR)B/(ME)B/\n(NQ)C/(AJ)Q/(VE)(ZR)/(NR)     H(XQ)  /\n(NQ)/(SW)Q/(BJ)X/M/\n(NQ)C/(AJ)Q/(VT)(ZY)/(NY)     T(BT)  /\n(XW)/(ME)R/(ZR)B/(ME)B/\n(NQ)C/(AJ)Q/(VQ)(ZE)/(NW)     G(BW)  /\nX/MQ/(ZQ)B/A/",
+  "settings": {
+    "slotMilliseconds": 164.83516483516485,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.88,
+    "rhythm": {
+      "bpm": 91,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 80
+  }
+}

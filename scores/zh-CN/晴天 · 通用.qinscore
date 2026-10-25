@@ -1,0 +1,24 @@
+{
+  "format": "qinbridge.score",
+  "version": 1,
+  "title": "晴天 · 通用",
+  "sourceUrl": "https://www.everyonepiano.cn/zimupu-192.html",
+  "scoreText": "NA/GA/VBN/GA/\nZB/GA/AG/MG/\nNA/GA/VBN/GA/\nZB/GA/AG/MG/\nN(AT)/(GT)(AQ)/(VQ)BN/(GW)(AE)/\nZ(BT)/(GT)(AQ)/(AQ)(GW)E/(MW)QG/\nN(AT)/(GT)(AQ)/(VQ)BN/(GW)(AE)/\nZ(BE)/G(AE)/(AR)E(GW)R/(ME)W(GQ)/\n(NG)(AQ)/(GQ)(AE)/(VR)(BE)N/(GW)(AQ)W/\n(ZE)(BE)/(GE)(AE)/(AW)E(GW)Q/(MQ)G/\n(NG)(AQ)/(GQ)(AE)/(VR)(BE)N/(GW)(AQ)W/\n(ZE)(BE)/(GE)(AE)/(AW)E(GW)Q/(MQ)GQ/\nNQ(AQ)Q/(GJ)QAQ/VQ(AQ)Q/(GJ)QAQ/\nZQ(BQ)Q/(GJ)QAQ/AQ(GQ)Q/(MT)TGT/\nNT(AT)T/(GT)TAT/VT(AT)T/(GT)R(AE)WE/\nZB/GA/AG/(MW)Q(GJ)Q/\n(NH)(AJ)/(GQ)(AT)/(VR)(AE)/(GQ)(AQ)/\nZB/GA/(AQ)Q(GQ)Q/(ME)(GQ)/\n(NH)(AJ)/(GQ)(AT)/(VR)(AE)/(GQ)AW/\nBS/GS/(BSGJ)/0/\n(ZD)(BS)/(AF)(BD)/C(BA)/(AG)(BJ)/\n(NQ)(CJ)/(AG)(CA)/N(CA)/(BH)(MH)/\nV(NH)/(AG)(NG)/B(MG)/(SF)(MD)/\n(ZS)(BD)/(AF)(BD)/SB/DB/\n(CD)B/(MG)BG/M(BG)/(MH)(BJ)/\n(NW)(CJ)/(AQ)(DQ)/BC/A(DQ)/\n(VQ)(AG)/(DG)(AH)/(VG)(ZF)/(NS)(ZD)/\n(BF)(XG)/(MH)(XA)/(BH)XJ/(MJ)X/\n(ZD)(BS)/(AF)(BD)/C(BA)/(AG)(BJ)/\n(NQ)(CJ)/(AG)(CA)/N(CA)/(BH)(MH)/\nV(NH)/(AG)(NG)/B(MG)/(SF)(MD)/\n(ZS)(BD)/(AF)(BD)/SB/DB/\n(CD)B/(MG)BG/M(BG)/(MH)(BJ)/\n(NW)(CJ)/(AQ)(DQ)/BC/A(DQ)/\n(VQ)(AG)/(DG)(AH)/(VG)(ZF)/(VN)(ZM)/\n(BA)(XS)/(MD)XS/(XB)/DA/\nZB/(AS)B(AS)/(AS)B/(AS)B(AS)/\nVN/(AD)N(AD)/(AD)N/(AD)N(AD)/\nXN/(AF)N(AF)/(AF)N/(AF)N(AF)/\nVN/(AD)V(BS)/SB/SBQ/\nNQ(AQ)Q/(GJ)QAQ/VQ(AQ)Q/(GJ)QAQ/\nZQ(BQ)Q/(GJ)QAQ/AQ(GQ)Q/(MT)TGT/\nNT(AT)T/(GT)TAT/VT(AT)T/(GT)R(AE)WE/\nZB/GA/AG/(MW)Q(GJ)Q/\n(NH)(AJ)/(GQ)(AT)/(VR)(AE)/(GQ)AQ/\nZB/GA/(AQ)Q(GQ)Q/(ME)(GQ)/\n(NH)(AJ)/(GQ)(AT)/(VR)(AE)/(GQ)AW/\nBS/(GJ)B/JS/GB/\n(ZD)(BS)/(AF)(BD)/C(BA)/(AG)(BJ)/\n(NQ)(CJ)/(AG)(CA)/N(CA)/(BH)(MH)/\nV(NH)/(AG)(NG)/B(MG)/(SF)(MD)/\n(ZS)(BD)/(AF)(BD)/SB/DB/\n(CD)B/(MG)BG/M(BG)/(MH)(BJ)/\n(NW)(CJ)/(AQ)(DQ)/BC/A(DQ)/\n(VQ)(AG)/(DG)(AH)/(VG)(ZF)/(NS)(ZD)/\n(BF)(XG)/(MH)(XA)/(BH)XJ/(MJ)X/\n(ZD)(BS)/(AF)(BD)/C(BA)/(AG)(BJ)/\n(NQ)(CJ)/(AG)(CA)/N(CA)/(BH)(MH)/\nV(NH)/(AG)(NG)/B(MG)/(SF)(MD)/\n(ZS)(BD)/(AF)(BD)/SB/DB/\n(CD)B/(MG)BG/M(BG)/(MH)(BJ)/\n(NW)(CJ)/(AQ)(DQ)/BC/A(DQ)/\n(VQ)(AG)/(DG)(AH)/(VG)(ZF)/(VN)(ZM)/\n(BA)(XS)/(MD)XS/(XB)/DA/\n(ZQ)Q(BQ)/(AQ)QB/(SQ)Q(BQ)Q/DQ(BQ)Q/\nVQ(AQ)Q/SQ(AQ)Q/(DQ)Q(AQ)Q/G(AQ)Q/\n(XQ)(NQ)/(SQ)Q(NQ)Q/(DQ)Q(NQ)Q/G(NQ)Q/\n(VQ)Q(AQ)Q/GQ(AQ)Q/(BQ)Q(SQ)Q/(GQ)QSQ/\n(ZQ)Q(BQ)/(AQ)Q(BQ)/(SQ)Q(BQ)Q/DQ(BQ)Q/\nVQ(AQ)Q/SQ(AQ)Q/(DQ)Q(AQ)Q/GQ(AQ)Q/\n(XQ)(NQ)/(SQ)QN/(DQ)Q(NQ)Q/GQ(NQ)Q/\n(VQ)Q(AQ)Q/(GQ)Q(AQ)Q/(BQ)Q(SQ)/GS/",
+  "settings": {
+    "slotMilliseconds": 220.58823529411765,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.88,
+    "rhythm": {
+      "bpm": 68,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 150
+  }
+}

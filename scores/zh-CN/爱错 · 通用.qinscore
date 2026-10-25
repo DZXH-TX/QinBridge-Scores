@@ -1,0 +1,35 @@
+{
+  "format": "qinbridge.score",
+  "version": 2,
+  "title": "爱错 · 通用",
+  "sourceUrl": "https://www.everyonepiano.cn/Piano-17508.html",
+  "scoreText": "N D /Q /F G /Q /\nA D /Q /B S /Q J G  /\nN D /Q /V F /Q G /\nA D /Q G /B S /J /\nN D /(HQ) (DQ) /(VQ) (AJ) /(FH) G /\nA G /A G /(BG) (SF) /(DGJ) S /\n(NA) D /(HQ) (DQ) /(VQ) (AJ) /(FH) G /\nA (FG) /(AD) (SG) /B S /(GJW) E W Q /\nN D /(HQ) (DQ) /(VQ) (AJ) /(FH) G /\nA (GH) /(AJ) (GQ) /B (SW) /(GQ) E /\n(NFW) F /H F /S F /H F /\n(NE) (FW) /(AQ) (FW) /A Q (FH)  /A F /\n(XE) (NW) /(SQ) (NQ) /(FQ) (NW) /(SE) (NW) /\nB S /G S /(NE) D /A (DH) /\n(ZQ) (BW) /(AE) (BR) /D (BE) /A B /\n(MQ) (SW) /(FE) (HR) /C (ME) /G /\n(NQ) (DW) /(HE) (DR) /A (DE) /H D /\n(BW) (SQ) /H (SQ) /(NDG) W /(ADG) G /\n(VQ) (AW) /(FE) (AR) /H (AE) /F /\n(CW) (AQ) /(DE) (AW) /N (DQ) /(AH) /\n(XW) (NQ) /(SH) (NQ) /(FW) (NQ) /(SH) Q /\n(BE) (SW) /(GQ) (SW) /B S /(GJW) Q /\nZ B /A D /(AG) /0 /\n",
+  "settings": {
+    "slotMilliseconds": 200,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.88,
+    "rhythm": {
+      "bpm": 75,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 150
+  },
+  "playbackControl": {
+    "bpm": 75,
+    "beatsPerBar": 4,
+    "beatUnit": 4,
+    "unitsPerBeat": 4,
+    "timing": "SlashBeats",
+    "arpeggioMilliseconds": 18,
+    "minimumTriggerIntervalMilliseconds": 150,
+    "gate": 0.88,
+    "ignoreMeasureNumbers": false
+  }
+}

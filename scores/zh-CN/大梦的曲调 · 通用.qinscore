@@ -1,0 +1,271 @@
+{
+  "format": "qinbridge.score",
+  "version": 2,
+  "title": "大梦的曲调 · 通用",
+  "sourceUrl": "https://www.bilibili.com/video/BV1Md4y1G72w/",
+  "scoreText": "Z B /B /N /\nM /0 /0 /\n0 /0 /0 /\n0 /0 /0 /\nZ B /B /N /\nC /Z /0 /\n0 /0 /0 /\n0 /0 /0 /\nZ B /B /N /\nM /0 /0 /\n0 /0 /0 /\n0 /N B /N M /\nS D /A /M /\nB /Z /0 /\n0 /0 /0 /\n0 /0 /0 /\nR /0 /E T /\nR /Q /E /\nR /0 /E U /\nR /J /E /\nR /0 /E /\nE /W /Q /\nE /0 /W /\nW /Y /0 /\nT /0 /R U /\nT /Q /E /\nR /0 /E U /\nR /J /U /\nU /0 /Y W /\nU /E /0 Y /\nU Y U  /0 /0 /\n0 /0 /0 /\nZ /B /N /\nN /M /0 /\nA /G /H /\nH /J /0 /\nZ /B /N /\nC /Z /0 /\nA /G /H /\nD S /A /0 /\nZ /B /N /\nN /A M N M /0 /\nA /G /H /\nH /(NJ) B /N M /\nS D /A /M /\nB /Z /S D /\nA /M /A /\n",
+  "settings": {
+    "slotMilliseconds": 147.05882352941177,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.88,
+    "rhythm": {
+      "bpm": 102,
+      "beatsPerBar": 3,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 120
+  },
+  "playbackControl": {
+    "tempoMap": [
+      {
+        "atBar": 1,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 2,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 3,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 4,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 5,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 6,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 7,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 8,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 9,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 10,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 11,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 12,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 13,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 14,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 15,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 16,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 17,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 18,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 19,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 20,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 21,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 22,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 23,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 24,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 25,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 26,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 27,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 28,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 29,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 30,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 31,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 32,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 33,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 34,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 35,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 36,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 37,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 38,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 39,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 40,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 41,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 42,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 43,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 44,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 45,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 46,
+        "bpm": 102,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 47,
+        "bpm": 102,
+        "curveToNext": "hold"
+      }
+    ],
+    "beatsPerBar": 3,
+    "beatUnit": 4,
+    "unitsPerBeat": 4,
+    "timing": "SlashBeats",
+    "arpeggioMilliseconds": 18,
+    "minimumTriggerIntervalMilliseconds": 120,
+    "gate": 0.88,
+    "ignoreMeasureNumbers": false
+  }
+}

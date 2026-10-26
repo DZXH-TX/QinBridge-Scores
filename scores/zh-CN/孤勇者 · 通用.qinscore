@@ -1,0 +1,596 @@
+{
+  "format": "qinbridge.score",
+  "version": 2,
+  "title": "孤勇者 · 通用",
+  "sourceUrl": "https://www.bilibili.com/video/BV1AR4y1b7Xd/",
+  "scoreText": "W /J /Q /H /\nW /J /Q /H /\nW /J /Q /H /\nW /J /Q /H /\n(VAW) /J /Q /H /\n(BSW) /J /Q /H /\n(NDW) /J /Q /H /\n(BSW) /J /Q /H /\n(VAW) (VA) /(VAJ) (VA) /(VAQ) (VA) /(VAH) (VA) /\n(BSW) (BS) /(BSJ) (BS) /(BSQ) (BS) /(BSH) (BS) /\n(NDW) (ND) /(NDJ) (ND) /(NDQ) (ND) /(NDH) (ND) /\n(BSW) (BS) /(BSJ) (BS) /(BSQ) (BS) /(BSH) (BS) /\n(NDE) /D /D /D /\nD /D /D Q /(MW) Q /\n(ADE) /D /D /D /\nD /D Q /(DW) Q /(DW) E /\n(VDH) /D Q /(DH) /D Q /\n(DH) /D Q /(DW) /(DQ) /\n(BDJ) /D /D /D /\nD /D /D S /A S /\n(NDE) /D /D /D /\nD /D /D Q /(MW) Q /\n(ADE) /D /D /D /\nD /D Q /(DW) Q /(DW) E /\n(VDH) /D Q /(DH) /D Q /\n(DH) /D Q /(DE) /(DW) /\n(BDJ) /D /D /D /\nD /D /D S /A S /\n(VAH) Q /(DY) /D Y /(DY) T /\n(DY) /(DY) T /(BSY) T /(DY) T /\n(NA) E /D /D /D /\nD /D /D /(DH) Q /\n(VAY) /D Y /(DY) T /(DY) T /\n(BSU) /D U /(DU) Y /(DU) Y /\n(NA) E /D /D /D /\nD /D /D E /(DT) E /\n(VAW) /D E /(DW) /D E /\n(BSW) /D E /(DT) E /(DT) E /\n(NAW) /D E /(DW) /D E /\n(BSW) /D /D /(DQ) W /\n(VAE) /(DH) /(DQ) /(DE) /\n(BSW) /D E /(DW) /(DQ) /\n(CNH) C /N S /D H /Q E /\n(QEY) /0 /0 /H J /\n(VQ) W /(NJ) Q /(ADQ) /(VQ) J /\n(BQ) W /(MJ) Q /(SGQ) /(BQ) W /\n(NQE) W /(AQE) W /(DHQE) /(NQE) W /\n(BQE) /(MQT) /(SGQE) /(BH) J /\n(VQ) W /(NJ) Q /(ADQ) /(VQ) J /\n(BQ) W /(MJ) Q /(SGQ) /(BQ) W /\n(NQE) W /(AQE) W /(DHQE) /(NQE) W /\n(BQE) /(MQT) /(SGQE) /(BQT) /\n(VE) N /A T /(ADE) /V T /\n(BE) (MT) /(SY) E /(SGT) /(BT) /\n(NE) A /D T /(DHE) /N T /\n(BE) (MT) /(SY) E /(SGT) /(BT) T /\n(VE) N /(AW) /(ADW) /(VQ) E /\nB M /(SW) /(SGW) /(BQ) H /\nN C /(AD) /(ADQ) /(ADJ) /\n(BH) M /S D /G W /E T /\nE /W /W /Q E /\n0 /W /W Q /Q Q /\n(VHW) /J /Q /H /\n(BW) /J /Q /H /\n(NW) /J /Q /H /\n(BW) /J /Q /H /\n(VW) /J /Q /H /\n(BW) /J /Q /H /\n(NW) /J /Q /H /\n(BW) /J /Q /H G /\n(VH) /N G /(AH) G /(NH) G /\n(BH) /M G /(SH) G /(MH) G /\nN D /C /N /M /\nA /M /N /(BH) G /\n(VH) /N G /(AH) G /(NH) G /\n(BJ) /M H /(SJ) H /(MJ) H /\nN D /C /N /M /\nA /0 /0 E /T E /\n(VW) /N E /(ADW) /V E /\n(BW) /M E /(SGT) E /(BT) E /\n(NW) /A E /(DHW) /N E /\n(BW) /M /(SG) /(BA) S /\n(VAD) /(VAH) /(VAQ) /(VAE) /\n(BSW) /(BS) E /(BSW) /(BSQ) /\n(NADH) C /N S /D H /Q E /\n(QEY) E /Q H /D N /H J /\n(VQ) W /(NJ) Q /(ADQ) /(VQ) J /\n(BQ) W /(MJ) Q /(SGQ) /(BQ) W /\n(NQE) W /(AQE) W /(DHQE) /(NQE) W /\n(BQE) /(MQT) /(SGQE) /(BH) J /\n(VQ) W /(NJ) Q /(ADQ) /(VQ) J /\n(BQ) W /(MJ) Q /(SGQ) /(BQ) W /\n(NQE) W /(AQE) W /(DHQE) /(NQE) W /\n(BQE) /(MQT) /(SGQE) /(BQT) /\n(VE) N /A T /(ADE) /V T /\n(BE) (MT) /(SY) E /(SGT) /(BT) /\n(NE) A /D T /(DHE) /N T /\n(BE) (MT) /(SY) E /(SGT) /(BT) T /\n(VE) N /(AW) /(ADW) /(VQ) E /\nB M /(SW) /(SGW) /(BQ) H /\nN C /(AD) /(ADQ) /(ADJ) /\n(BH) M /S D /G W /E T /\nE /W /W /Q E /\n0 /W /W Q /Q Q /\n(VHW) /J /Q /H /\n(BW) /J /Q /H /\n(NW) /J /Q /H /\n(BW) /J /Q /H /\n(VW) /J /Q /H /\n(BW) /J /Q /H /\n(NW) /J /Q /H /\n(BW) /J /Q /0 /\n",
+  "settings": {
+    "slotMilliseconds": 118.750000445,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.88,
+    "rhythm": {
+      "bpm": 126.315789,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 150
+  },
+  "playbackControl": {
+    "tempoMap": [
+      {
+        "atBar": 1,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 2,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 3,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 4,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 5,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 6,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 7,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 8,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 9,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 10,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 11,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 12,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 13,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 14,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 15,
+        "bpm": 124.137931,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 16,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 17,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 18,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 19,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 20,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 21,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 22,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 23,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 24,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 25,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 26,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 27,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 28,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 29,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 30,
+        "bpm": 132.110092,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 31,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 32,
+        "bpm": 124.137931,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 33,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 34,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 35,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 36,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 37,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 38,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 39,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 40,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 41,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 42,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 43,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 44,
+        "bpm": 125.217391,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 45,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 46,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 47,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 48,
+        "bpm": 134.579439,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 49,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 50,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 51,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 52,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 53,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 54,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 55,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 56,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 57,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 58,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 59,
+        "bpm": 125.217391,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 60,
+        "bpm": 132.110092,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 61,
+        "bpm": 129.341317,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 62,
+        "bpm": 127.810651,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 63,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 64,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 65,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 66,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 67,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 68,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 69,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 70,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 71,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 72,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 73,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 74,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 75,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 76,
+        "bpm": 132.110092,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 77,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 78,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 79,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 80,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 81,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 82,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 83,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 84,
+        "bpm": 133.333333,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 85,
+        "bpm": 124.137931,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 86,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 87,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 88,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 89,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 90,
+        "bpm": 134.579439,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 91,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 92,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 93,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 94,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 95,
+        "bpm": 126.315789,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 96,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 97,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 98,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 99,
+        "bpm": 130.909091,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 100,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 101,
+        "bpm": 125.217391,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 102,
+        "bpm": 132.110092,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 103,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 104,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 105,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 106,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 107,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 108,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 109,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 110,
+        "bpm": 129.72973,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 111,
+        "bpm": 127.433628,
+        "curveToNext": "hold"
+      },
+      {
+        "atBar": 112,
+        "bpm": 128.571429,
+        "curveToNext": "hold"
+      }
+    ],
+    "beatsPerBar": 4,
+    "beatUnit": 4,
+    "unitsPerBeat": 4,
+    "timing": "SlashBeats",
+    "arpeggioMilliseconds": 18,
+    "minimumTriggerIntervalMilliseconds": 150,
+    "gate": 0.88,
+    "ignoreMeasureNumbers": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "format": "qinbridge.score",
+  "version": 2,
+  "title": "国际歌 · 通用",
+  "sourceUrl": "https://fr.wikisource.org/wiki/L%E2%80%99Internationale/Partition",
+  "scoreText": "(ZT) /(ADG) /(ZR) /(ADGE) /\n(XW) Q /(SFHW) E /(ZR) /(AFH) R /\n(ZE) /(ADG) E /(XW) /(MSF) W /\n(ZQ) /(ADG) /(XQ) /(MSF) G /\n(ZQ) /(AG) J /(BW) Q /(AG) D /\n(VH) /A /(ZF) /(AH) H /\n(BW) /(MF) Q /(XJ) H /(MFG) F /\n(ZD) /(AG) /B /(AG) G /\n(ZQ) /(AG) J /(BW) Q /(AG) D /\n(VH) /A /(ZF) /(MFW) Q /\n(BJ) /(MF) W /(XR) /(MF) J /\n(ZQ) /(AG) /B /(AGE) W /\n(BJ) /(MG) /(CH) J /(AHQ) H /\n(BJ) /(MG) /(XG) /(SFH) G /\n(XH) /(SH) H /(XW) /(MF) Q /\n(BJ) /(MF) /X /(MF) W /\n(BW) /(MG) J /(XG) G /(SFH) G /\n(ZE) /(AG) /(CQ) H /(AHJ) Q /\n(BJ) /(MFW) /(NQ) /(SH) /\n(BG) /(MF) /X /(MFE)   W /\n(ZQ) /(ADG) /(XG) /(MS) H /\n(VH) /(AF) /(ZF) /(MSFW)   Q /\n(BJ) /(MSF) /(NH) /(SF) G /\n(ZG) /(AD) /B /(ADG) /\n(ZE) /(ADG) /(XW) /(MSFG) /\n(ZQ) /(ADG) /(XJ) /(MSF) J /\n(NH) /(AD) G /(CH) /(SFHW) /\n(BW) /(MSF) /X /(MSFE)   W /\n(ZQ) /(ADG) /(XG) /(MS) H /\n(VH) /(AF) /(ZF) /(MSFW)   Q /\n(BJ) /(MSF) /(NH) /(SF) G /\n(ZE) /(ADG) /B /(ADGE) /\n(ZT) /(ADG) /(ZR) /(ADGE) /\n(XW) Q /(SFHW) E /(ZR) /(AFH) R /\n(ZE) /(ADG) E /(XW) /(MSF) W /\n(ZADGQ) /0 /0 /0 /\n",
+  "settings": {
+    "slotMilliseconds": 150,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.88,
+    "rhythm": {
+      "bpm": 100,
+      "beatsPerBar": 4,
+      "beatUnit": 4,
+      "unitsPerBeat": 4
+    },
+    "score": {
+      "notation": "Keyboard",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 120
+  },
+  "playbackControl": {
+    "bpm": 100,
+    "beatsPerBar": 4,
+    "beatUnit": 4,
+    "unitsPerBeat": 4,
+    "timing": "SlashBeats",
+    "arpeggioMilliseconds": 18,
+    "minimumTriggerIntervalMilliseconds": 120,
+    "gate": 0.88,
+    "ignoreMeasureNumbers": false
+  }
+}

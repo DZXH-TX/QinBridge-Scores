@@ -220,7 +220,7 @@ def validate_tempo_map(points):
     require(points[-1].get("curveToNext", "hold") == "hold", "Last tempo point must hold")
 
 
-def resolve_playback_settings(settings, control=None):
+def resolve_playback_settings(settings, control=None, *, allow_midi=False):
     """Validate both the baseline and the file-owned overlay, without changing either."""
     shape(settings, ("slotMilliseconds", "arpeggioMilliseconds", "gate", "rhythm", "score", "minimumTriggerIntervalMilliseconds"))
     bounded_number(settings.get("slotMilliseconds", 125), 20, 2000)
@@ -242,7 +242,8 @@ def resolve_playback_settings(settings, control=None):
         options = {"notation": "Keyboard"}
     shape(options, ("notation", "timing", "ignoreMeasureNumbers"))
     notation, timing, ignore = options.get("notation", "Auto"), options.get("timing", "SpaceGrid"), options.get("ignoreMeasureNumbers", False)
-    require(notation in ("Auto", "Keyboard", "Numbers") and timing in ("SpaceGrid", "SlashBeats") and type(ignore) is bool, "Invalid score reading options")
+    require(notation in (("Auto", "Keyboard", "Numbers", "Midi") if allow_midi else ("Auto", "Keyboard", "Numbers"))
+            and timing in ("SpaceGrid", "SlashBeats") and type(ignore) is bool, "Invalid score reading options")
     effective = {"bpm": bpm, "beatsPerBar": beats, "beatUnit": unit, "unitsPerBeat": divisions,
                  "timing": timing, "ignoreMeasureNumbers": ignore,
                  "arpeggioMilliseconds": settings.get("arpeggioMilliseconds", 18),
@@ -277,18 +278,80 @@ def resolve_playback_settings(settings, control=None):
     return effective, notation
 
 
+def validate_midi(midi):
+    """Validate portable note data against Qin.Core.MidiScore, without parsing a binary or executing content."""
+    fields = ("ticksPerQuarterNote", "durationTicks", "notes", "tempos", "meters", "tracks", "selectedTracks")
+    shape(midi, (*fields, "transposeSemitones", "ignoredExpressionEvents", "unpairedNoteEvents"), fields)
+
+    def integer(value, low, high):
+        require(type(value) is int and low <= value <= high, "Invalid MIDI integer or range")
+
+    integer(midi["ticksPerQuarterNote"], 1, 32767)
+    duration = midi["durationTicks"]
+    integer(duration, 1, 1 << 40)
+    integer(midi.get("transposeSemitones", 0), -24, 24)
+    for name in ("ignoredExpressionEvents", "unpairedNoteEvents"):
+        integer(midi.get(name, 0), 0, 2147483647)
+    for name in ("notes", "tempos", "meters", "tracks", "selectedTracks"):
+        require(type(midi[name]) is list and bool(midi[name]), "MIDI arrays must be nonempty")
+    require(len(midi["notes"]) <= 100_000, "MIDI exceeds 100000 notes")
+    tracks = set()
+    for track in midi["tracks"]:
+        shape(track, ("index", "name"), ("index", "name"))
+        integer(track["index"], 0, 2147483647)
+        require(track["index"] not in tracks and type(track["name"]) is str, "Invalid or duplicate MIDI track")
+        tracks.add(track["index"])
+    selected = set()
+    for index in midi["selectedTracks"]:
+        integer(index, 0, 2147483647)
+        require(index in tracks and index not in selected, "Invalid or duplicate selected MIDI track")
+        selected.add(index)
+    playable = False
+    for note in midi["notes"]:
+        fields = ("pitch", "tick", "length", "track", "channel", "velocity")
+        shape(note, fields, fields)
+        for key, low, high in (("pitch", 0, 127), ("tick", 0, duration - 1), ("track", 0, 2147483647),
+                               ("channel", 0, 15), ("velocity", 1, 127)):
+            integer(note[key], low, high)
+        integer(note["length"], 1, duration - note["tick"])
+        require(note["track"] in tracks, "MIDI note refers to missing track")
+        playable |= note["channel"] != 9 and note["track"] in selected
+    require(playable, "MIDI contains no selected non-percussion notes")
+    for name, fields in (("tempos", ("tick", "microsecondsPerQuarter")), ("meters", ("tick", "numerator", "denominator"))):
+        previous = -1
+        for point in midi[name]:
+            shape(point, fields, fields)
+            integer(point["tick"], 0, duration)
+            require(point["tick"] > previous and (previous != -1 or point["tick"] == 0),
+                    "MIDI timing maps must start at tick 0 and strictly increase")
+            if name == "tempos":
+                integer(point["microsecondsPerQuarter"], 1, 0xFFFFFF)
+            else:
+                integer(point["numerator"], 1, 255)
+                integer(point["denominator"], 1, 128)
+                denominator = point["denominator"]
+                require(denominator & (denominator - 1) == 0, "MIDI denominator must be a power of two")
+            previous = point["tick"]
+
+
 def validate_score(raw):
     score = strict_json(raw, SCORE_BYTES)
-    shape(score, ("format", "version", "title", "sourceUrl", "scoreText", "settings", "playbackControl"),
+    shape(score, ("format", "version", "title", "sourceUrl", "scoreText", "settings", "playbackControl", "midi"),
           ("format", "version", "title", "scoreText", "settings"))
-    require(score["format"] == "qinbridge.score" and type(score["version"]) is int and score["version"] in (1, 2), "Unsupported score format/version")
-    if score["version"] == 1:
-        require("playbackControl" not in score, "Version 1 cannot contain playbackControl")
+    require(score["format"] == "qinbridge.score" and type(score["version"]) is int and score["version"] in (1, 2, 3), "Unsupported score format/version")
+    if score["version"] != 2:
+        require("playbackControl" not in score, "Only version 2 can contain playbackControl")
     else:
         require(type(score.get("playbackControl")) is dict and bool(score["playbackControl"]), "Version 2 requires nonempty playbackControl")
+    require((score["version"] == 3) == ("midi" in score), "Only version 3 requires MIDI data")
     text_field(score["title"], 256)
     source_url(score.get("sourceUrl", ""))
-    effective, notation = resolve_playback_settings(score["settings"], score.get("playbackControl"))
+    effective, notation = resolve_playback_settings(score["settings"], score.get("playbackControl"), allow_midi=score["version"] == 3)
+    if score["version"] == 3:
+        require(notation == "Midi" and effective["timing"] == "SlashBeats", "MIDI requires Midi/SlashBeats reading options")
+        require(type(score["scoreText"]) is str and len(score["scoreText"]) <= 1_000_000, "Invalid MIDI scoreText")
+        validate_midi(score["midi"])
+        return score
     slots = validate_notation(score["scoreText"], notation, effective["timing"], effective["ignoreMeasureNumbers"])
     if "tempoMap" in effective:
         total_beats = slots if effective["timing"] == "SlashBeats" else slots / effective["unitsPerBeat"]

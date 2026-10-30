@@ -6,6 +6,8 @@
 
 ## 1. 准备一份可用的乐谱
 
+琴桥 0.12.0 起导出的 MIDI 曲谱使用 `version: 3` 和 `midi`，仓库校验器支持该格式。保留音符、音轨选择、移调、速度和拍号数据，不降级为文字谱；v3 不能包含 `playbackControl`。参见 [MIDI v3 格式](docs/SCORE-FORMAT.md#midi-v3琴桥-0120-起)。
+
 在琴桥中编辑曲目并试听，保存谱面与节奏设置，然后在「曲谱文件」页面导出 `.qinscore`。文件控制使用 `version: 2` 和 `playbackControl`；固定控制需琴桥 0.10.0 起，按小节变速 `tempoMap` 需 0.11.0 起。当前为本地测试包，不代表商店已发布。
 
 文件需要保留标题、谱面和演奏设置；使用文件控制时，还要保留顶层 `playbackControl` 和有效的 `settings` 基线。如果手工编写，可以参考[数字谱示例](examples/numbers.qinscore)、[键盘谱示例](examples/keyboard.qinscore)、[文件控制示例](examples/file-controlled.qinscore)和[字段说明](docs/SCORE-FORMAT.md)。

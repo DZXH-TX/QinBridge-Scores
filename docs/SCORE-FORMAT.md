@@ -35,21 +35,39 @@
 }
 ```
 
-JSON 字符串中的 `\n` 表示换行。字段名区分大小写；数值不加引号，布尔值使用 `true` / `false`。不支持注释、尾随逗号、重复键或未定义字段；`playbackControl` 是 v2 新增的唯一扩展字段，v1 中不能出现，v2 中必须出现且非空，其余未定义字段仍然一律拒绝。
+JSON 字符串中的 `\n` 表示换行。字段名区分大小写；数值不加引号，布尔值使用 `true` / `false`。不支持注释、尾随逗号、重复键或未定义字段；`playbackControl` 仅用于 v2；`midi` 仅用于 v3。各版本禁止混用这些字段，包括显式 `null`；其余未定义字段仍然一律拒绝。
 
 ## 顶层字段
 
 | 字段 | 必填 | 含义 |
 | --- | --- | --- |
 | `format` | 是 | 固定为 `"qinbridge.score"` |
-| `version` | 是 | 普通文件为整数 `1`；带 `playbackControl` 的文件必须为整数 `2` |
+| `version` | 是 | 普通文字谱为整数 `1`；带 `playbackControl` 的文字谱为整数 `2`；携带 MIDI 数据为整数 `3` |
 | `title` | 是 | 非空曲名，最多 256 个字符；语言与投稿目录对应 |
 | `sourceUrl` | 否 | 来源 HTTP(S) 地址，或空字符串；最多 2048 个字符 |
-| `scoreText` | 是 | 非空谱面文本，至少包含一个音符 |
+| `scoreText` | 是 | v1/v2 为非空谱面文本；v3 导出为空字符串，音符读取自 `midi` |
 | `settings` | 是 | 演奏设置对象，推荐完整保留软件导出的值；也是可编辑设置的初始值与未接管字段的基线，必须自身有效 |
 | `playbackControl` | 仅 v2 | 文件控制播放参数对象；v2 必须出现且至少一个字段，v1 不得出现。见[文件控制播放参数](#playback-control) |
+| `midi` | 仅 v3 | 原始 MIDI 音符、速度、拍号及音轨数据；必填，不能与 `playbackControl` 并用 |
 
 标题、来源等元数据不接受控制字符。作者、适用游戏和分发授权情况写在 **PR 说明** 或可选的[随谱来源说明](#source-notes)中，不要自行加入 `.qinscore` 字段。来源网址仅作为资料保存，仓库校验时不会访问它。
+
+## MIDI v3（琴桥 0.12.0 起）
+
+[完整 MIDI 示例](../examples/midi.qinscore)是用于说明协议的单音测试数据，不是正式曲库作品。MIDI 导出保留原始 tick、音高和时长，不转换为有损文字谱。`settings.score` 必须使用 `notation: "Midi"`、`timing: "SlashBeats"`；通用 `settings` 仍须满足既有范围，实际速度和拍号读取自 `midi`。
+
+| `midi` 字段 | 校验规则 |
+| --- | --- |
+| `ticksPerQuarterNote` | 整数 1–32767 |
+| `durationTicks` | 正整数，不超过 2 的 40 次方 |
+| `notes` | 1–100000 项 `{pitch,tick,length,track,channel,velocity}`；音高 0–127、通道 0–15、力度 1–127；起点和正时长不得越过全曲结尾 |
+| `tracks`、`selectedTracks` | 非空音轨 `{index,name}` 列表与非空所选索引列表；索引不得重复，引用的音轨必须存在 |
+| `tempos` | 非空 `{tick,microsecondsPerQuarter}`；首点 tick 0，后续严格递增且不超过全曲结尾；微秒值 1–16777215 |
+| `meters` | 非空 `{tick,numerator,denominator}`；时间顺序同上；分子 1–255，分母为 1–128 中的 2 的幂 |
+| `transposeSemitones` | 可选，整数 −24–24，缺省 0 |
+| `ignoredExpressionEvents`、`unpairedNoteEvents` | 可选，非负 32 位整数，缺省 0 |
+
+至少有一个所选音轨包含非打击乐音符（`channel != 9`）。所有层级严格拒绝未知字段、重复 JSON 键、错误数值类型及非有限值。JSON 文件仍限制为 4 MiB；最多 100000 个音符不代表全部能装进此大小限制。`catalog.json` 继续使用版本 1；v1/v2 的解析和安全规则保持原样。校验器只读取数据，不调用 MIDI 播放器或执行文件内容。
 
 ## 数字谱与键盘谱
 

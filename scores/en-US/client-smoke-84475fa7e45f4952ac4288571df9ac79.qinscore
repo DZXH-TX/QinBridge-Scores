@@ -1,0 +1,62 @@
+{
+  "format": "qinbridge.score",
+  "version": 3,
+  "title": "客户端投稿验证 · 单音 MIDI",
+  "sourceUrl": "",
+  "scoreText": "",
+  "settings": {
+    "slotMilliseconds": 125,
+    "arpeggioMilliseconds": 18,
+    "gate": 0.72,
+    "rhythm": null,
+    "score": {
+      "notation": "Midi",
+      "timing": "SlashBeats",
+      "ignoreMeasureNumbers": false
+    },
+    "minimumTriggerIntervalMilliseconds": 150
+  },
+  "midi": {
+    "ticksPerQuarterNote": 480,
+    "durationTicks": 1920,
+    "notes": [
+      {
+        "pitch": 60,
+        "tick": 120,
+        "length": 480,
+        "track": 0,
+        "channel": 0,
+        "velocity": 90
+      }
+    ],
+    "tempos": [
+      {
+        "tick": 0,
+        "microsecondsPerQuarter": 500000
+      },
+      {
+        "tick": 960,
+        "microsecondsPerQuarter": 600000
+      }
+    ],
+    "meters": [
+      {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      }
+    ],
+    "tracks": [
+      {
+        "index": 0,
+        "name": "Piano"
+      }
+    ],
+    "selectedTracks": [
+      0
+    ],
+    "transposeSemitones": 0,
+    "ignoredExpressionEvents": 0,
+    "unpairedNoteEvents": 0
+  }
+}
